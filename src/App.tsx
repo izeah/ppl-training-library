@@ -11,6 +11,7 @@ import {
     Clock,
     Dumbbell,
     Download,
+    ExternalLink,
     FileUp,
     Filter,
     Flame,
@@ -819,8 +820,15 @@ function App() {
                                             target="_blank"
                                             rel="noreferrer"
                                         >
-                                            Search more on YouTube{" "}
-                                            <ChevronRight size={16} />
+                                            <span>
+                                                Search more on{" "}
+                                                <img
+                                                    src={`${import.meta.env.BASE_URL}youtube.png`}
+                                                    alt="YouTube"
+                                                    className="yt-logo"
+                                                />
+                                            </span>
+                                            <ExternalLink size={15} />
                                         </a>
                                     </div>
                                 ) : (
@@ -977,8 +985,15 @@ function App() {
                                         target="_blank"
                                         rel="noreferrer"
                                     >
-                                        Search more on YouTube{" "}
-                                        <ChevronRight size={16} />
+                                        <span>
+                                                Search more on{" "}
+                                                <img
+                                                    src={`${import.meta.env.BASE_URL}youtube.png`}
+                                                    alt="YouTube"
+                                                    className="yt-logo"
+                                                />
+                                            </span>
+                                            <ExternalLink size={15} />
                                     </a>
                                 )}
                             </div>

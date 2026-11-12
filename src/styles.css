@@ -51,6 +51,9 @@
 /* sticky left panel */
 .detail-left{position:sticky;top:88px;align-self:start}
 @media(max-width:700px){.detail-left{position:static}}
+/* youtube link: logo in place of the word, new-tab icon */
+.youtube-link>span{display:inline-flex;align-items:center;gap:7px}
+.yt-logo{height:16px;width:auto;display:block}
 /* muscle map hover: enlarged, trained muscles pump + blood-flow dashes */
 .detail-section .muscle-map{cursor:zoom-in}
 .muscle-map.muscle-map-zoom{width:min(600px,86vw);max-width:none;gap:48px;margin:0}
@@ -59,3 +62,7 @@
 @keyframes blood-flow{to{stroke-dashoffset:-22}}
 @keyframes muscle-pump{50%{transform:scale(1.045);filter:brightness(1.3) drop-shadow(0 0 5px #ff3b4f)}}
 @media(prefers-reduced-motion:reduce){.muscle-map-zoom polygon{animation:none!important}}
+/* hover feedback: YouTube link + Back */
+.youtube-link,.back-btn{transition:background .15s,color .15s}
+.youtube-link:is(:hover,:focus-visible){background:color-mix(in srgb,var(--accent) 8%,var(--accent-dark))}
+.back-btn:is(:hover,:focus-visible){color:var(--text)}
