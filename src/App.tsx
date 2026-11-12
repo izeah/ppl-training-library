@@ -803,7 +803,7 @@ function App() {
                             <ArrowLeft size={16} /> Back
                         </button>
                         <div className="detail-layout">
-                            <div>
+                            <div className="detail-left">
                                 {selected.tutorialVideoId ? (
                                     <div className="panel detail-video">
                                         <VideoEmbed

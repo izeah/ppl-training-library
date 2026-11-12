@@ -28,3 +28,6 @@
 .shots img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:8px;border:1px solid var(--border);background:#fff;display:block}
 .shots figcaption{font:9px 'DM Mono';color:var(--muted);letter-spacing:.5px;margin-top:5px;text-transform:uppercase}
 .shots-credit{font-size:10px;margin:0 0 12px}
+/* sticky left panel */
+.detail-left{position:sticky;top:88px;align-self:start}
+@media(max-width:700px){.detail-left{position:static}}
