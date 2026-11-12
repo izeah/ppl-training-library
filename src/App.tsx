@@ -68,6 +68,16 @@ type Page =
     | "settings"
     | "logger"
     | "detail";
+const TITLES: Record<Page, string> = {
+    home: "Dashboard",
+    library: "Exercise Library",
+    planner: "Workout Planner",
+    history: "Workout History",
+    analytics: "Progress Analytics",
+    settings: "Settings",
+    logger: "Active Workout",
+    detail: "Exercise Detail",
+};
 const today = () => {
     const d = new Date();
     return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
@@ -407,22 +417,19 @@ function App() {
         setMeasurements(await allMeasurements());
         setNotice("Berat badan dicatat.");
     };
-    const title =
-        page === "home"
-            ? "Dashboard"
-            : page === "library"
-              ? "Exercise Library"
-              : page === "planner"
-                ? "Workout Planner"
-                : page === "history"
-                  ? "Workout History"
-                  : page === "analytics"
-                    ? "Progress Analytics"
-                    : page === "settings"
-                      ? "Settings"
-                      : page === "logger"
-                        ? "Active Workout"
-                        : "Exercise Detail";
+    // Last crumb = current page (not clickable). Detail shows where it was opened from.
+    const crumbs: { label: string; go?: () => void }[] = [
+        { label: "Workspace", go: () => setPage("home") },
+        ...(page === "detail" && selected
+            ? [
+                  {
+                      label: TITLES[detailReturn],
+                      go: () => setPage(detailReturn),
+                  },
+                  { label: selected.name },
+              ]
+            : [{ label: TITLES[page] }]),
+    ];
     return (
         <div className="app-shell">
             <aside className={`sidebar${sidebarOpen ? "" : " sidebar-hidden"}`}>
@@ -492,9 +499,19 @@ function App() {
                     <div className="mobile-brand">
                         <Dumbbell size={19} /> PPL LIBRARY
                     </div>
-                    <div className="crumb">
-                        WORKSPACE <span>/</span> {title.toUpperCase()}
-                    </div>
+                    <nav className="crumb" aria-label="Breadcrumb">
+                        {crumbs.map((c) =>
+                            c.go ? (
+                                <button key={c.label} onClick={c.go}>
+                                    {c.label}
+                                </button>
+                            ) : (
+                                <b key={c.label} aria-current="page">
+                                    {c.label}
+                                </b>
+                            ),
+                        )}
+                    </nav>
                     <div className="top-actions">
                         <span className="local-pill">
                             <span className="live-dot" /> LOCAL STORAGE
