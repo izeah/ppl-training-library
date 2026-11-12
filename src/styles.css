@@ -28,6 +28,26 @@
 .shots img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:8px;border:1px solid var(--border);background:#fff;display:block}
 .shots figcaption{font:9px 'DM Mono';color:var(--muted);letter-spacing:.5px;margin-top:5px;text-transform:uppercase}
 .shots-credit{font-size:10px;margin:0 0 12px}
+/* shots hover zoom */
+.shots-fig{margin:0;position:relative;cursor:zoom-in}
+.shot-zoom-hint{position:absolute;inset:0;background:#0004;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .15s;border-radius:8px}
+.shot-zoom-hint svg{color:#fff;filter:drop-shadow(0 1px 4px #0008)}
+.shots-fig:hover .shot-zoom-hint{opacity:1}
+/* hover zoom: full-screen, no nav */
+.zoom-overlay{position:fixed;inset:0;z-index:90;background:#000d;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(2px);pointer-events:none}
+.zoom-full{max-width:92vw;max-height:90vh;object-fit:contain;border-radius:10px;box-shadow:0 20px 60px #000a;display:block}
+/* lightbox with side nav */
+.lightbox-overlay{position:fixed;inset:0;background:#000b;z-index:100;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(5px)}
+.lightbox-wrapper{display:flex;align-items:center;gap:18px}
+.lightbox-nav-side{width:46px;height:46px;border-radius:50%;background:var(--panel);border:1px solid var(--border);color:var(--text);display:grid;place-items:center;cursor:pointer;flex-shrink:0}
+.lightbox-nav-side:hover{border-color:var(--accent);color:var(--accent)}
+.lightbox-box{position:relative;background:var(--panel);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;max-width:min(760px,80vw);box-shadow:0 24px 64px #0009}
+.lightbox-img{width:100%;height:auto;max-height:74vh;object-fit:contain;display:block;background:#111}
+.lightbox-close{position:absolute;top:11px;right:11px;z-index:2;background:#000a;border:0;border-radius:50%;width:34px;height:34px;display:grid;place-items:center;color:#fff;cursor:pointer}
+.lightbox-close:hover{background:#000}
+.lightbox-footer{padding:11px 15px;display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--border)}
+.lightbox-caption{font:600 12px Manrope;color:var(--text);margin:0}
+.lightbox-counter{font:11px 'DM Mono';color:var(--muted)}
 /* sticky left panel */
 .detail-left{position:sticky;top:88px;align-self:start}
 @media(max-width:700px){.detail-left{position:static}}

@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Model, { type Muscle } from "react-body-highlighter";
-import { Play } from "lucide-react";
+import { ChevronLeft, ChevronRight, Play, X, ZoomIn } from "lucide-react";
 
 export const photo = (id: string, n: 0 | 1) =>
     `${import.meta.env.BASE_URL}exercises/${id}/${n}.webp`;
@@ -68,23 +68,128 @@ export function MuscleMap({
     );
 }
 
+const LABELS = ["Posisi awal", "Posisi akhir"] as const;
+const LAST = LABELS.length - 1;
+
 export function Shots({ id, name }: { id: string; name: string }) {
+    const [lightbox, setLightbox] = useState<number | null>(null);
+    const [hoverZoom, setHoverZoom] = useState<number | null>(null);
+    const open = lightbox !== null;
+    useEffect(() => {
+        if (!open) return;
+        const onKey = (e: KeyboardEvent) => {
+            if (e.key === "Escape") setLightbox(null);
+            if (e.key === "ArrowLeft")
+                setLightbox((i) => Math.max(0, (i ?? 0) - 1));
+            if (e.key === "ArrowRight")
+                setLightbox((i) => Math.min(LAST, (i ?? 0) + 1));
+        };
+        document.addEventListener("keydown", onKey);
+        return () => document.removeEventListener("keydown", onKey);
+    }, [open]);
     return (
-        <div className="shots">
-            {([0, 1] as const).map((n) => (
-                <figure key={n}>
+        <>
+            <div className="shots">
+                {([0, 1] as const).map((n) => (
+                    <figure
+                        key={n}
+                        className="shots-fig"
+                        onMouseEnter={() => setHoverZoom(n)}
+                        onMouseLeave={() => setHoverZoom(null)}
+                        onClick={() => {
+                            setHoverZoom(null);
+                            setLightbox(n);
+                        }}
+                    >
+                        <img
+                            src={photo(id, n)}
+                            alt={`${name} - ${LABELS[n]}`}
+                            width={640}
+                            height={427}
+                            loading="lazy"
+                            decoding="async"
+                        />
+                        <div className="shot-zoom-hint" aria-hidden="true">
+                            <ZoomIn size={18} />
+                        </div>
+                        <figcaption>{LABELS[n]}</figcaption>
+                    </figure>
+                ))}
+            </div>
+
+            {/* Hover: full-screen zoom, no nav. pointer-events:none in CSS so
+                the thumbnail keeps the hover (otherwise enter/leave loops = flicker). */}
+            {hoverZoom !== null && (
+                <div className="zoom-overlay" aria-hidden="true">
                     <img
-                        src={photo(id, n)}
-                        alt={`${name} - ${n ? "posisi akhir" : "posisi awal"}`}
-                        width={640}
-                        height={427}
-                        loading="lazy"
-                        decoding="async"
+                        src={photo(id, hoverZoom as 0 | 1)}
+                        alt={`${name} - ${LABELS[hoverZoom]}`}
+                        className="zoom-full"
                     />
-                    <figcaption>{n ? "Posisi akhir" : "Posisi awal"}</figcaption>
-                </figure>
-            ))}
-        </div>
+                </div>
+            )}
+
+            {/* Click: lightbox with side nav buttons */}
+            {lightbox !== null && (
+                <div
+                    className="lightbox-overlay"
+                    onClick={() => setLightbox(null)}
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label="Lightbox foto"
+                >
+                    <div
+                        className="lightbox-wrapper"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            className="lightbox-nav-side"
+                            style={{
+                                visibility:
+                                    lightbox > 0 ? "visible" : "hidden",
+                            }}
+                            onClick={() => setLightbox(lightbox - 1)}
+                            aria-label="Sebelumnya"
+                        >
+                            <ChevronLeft size={22} />
+                        </button>
+                        <div className="lightbox-box">
+                            <button
+                                className="lightbox-close"
+                                onClick={() => setLightbox(null)}
+                                aria-label="Tutup"
+                            >
+                                <X size={18} />
+                            </button>
+                            <img
+                                src={photo(id, lightbox as 0 | 1)}
+                                alt={`${name} - ${LABELS[lightbox]}`}
+                                className="lightbox-img"
+                            />
+                            <div className="lightbox-footer">
+                                <p className="lightbox-caption">
+                                    {LABELS[lightbox]}
+                                </p>
+                                <span className="lightbox-counter">
+                                    {lightbox + 1} / {LAST + 1}
+                                </span>
+                            </div>
+                        </div>
+                        <button
+                            className="lightbox-nav-side"
+                            style={{
+                                visibility:
+                                    lightbox < LAST ? "visible" : "hidden",
+                            }}
+                            onClick={() => setLightbox(lightbox + 1)}
+                            aria-label="Berikutnya"
+                        >
+                            <ChevronRight size={22} />
+                        </button>
+                    </div>
+                </div>
+            )}
+        </>
     );
 }
 
