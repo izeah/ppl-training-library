@@ -1,0 +1,1290 @@
+[
+  {
+    "id": "push-barbell-bench-press",
+    "name": "Barbell Bench Press",
+    "split": "Push",
+    "primaryMuscles": [
+      "Dada/pectoralis major"
+    ],
+    "secondaryMuscles": [
+      "Deltoid depan",
+      "triceps"
+    ],
+    "sets": "3",
+    "reps": "6–8",
+    "rest": "2–3 mnt",
+    "restSeconds": 120,
+    "equipment": [
+      "Barbell",
+      "bench",
+      "rack"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=barbell+bench+press+proper+form"
+  },
+  {
+    "id": "push-incline-db-press",
+    "name": "Incline DB Press",
+    "split": "Push",
+    "primaryMuscles": [
+      "Upper chest"
+    ],
+    "secondaryMuscles": [
+      "Deltoid depan",
+      "triceps"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "90–120 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Dumbbell",
+      "incline bench"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=incline+db+press+proper+form"
+  },
+  {
+    "id": "push-flat-db-press",
+    "name": "Flat DB Press",
+    "split": "Push",
+    "primaryMuscles": [
+      "Dada"
+    ],
+    "secondaryMuscles": [
+      "Deltoid depan",
+      "triceps"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "90–120 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Dumbbell",
+      "bench"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=flat+db+press+proper+form"
+  },
+  {
+    "id": "push-machine-chest-press",
+    "name": "Machine Chest Press",
+    "split": "Push",
+    "primaryMuscles": [
+      "Dada"
+    ],
+    "secondaryMuscles": [
+      "Deltoid depan",
+      "triceps"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "90–120 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Chest press machine"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=machine+chest+press+proper+form"
+  },
+  {
+    "id": "push-incline-barbell-press",
+    "name": "Incline Barbell Press",
+    "split": "Push",
+    "primaryMuscles": [
+      "Upper chest"
+    ],
+    "secondaryMuscles": [
+      "Deltoid depan",
+      "triceps"
+    ],
+    "sets": "3",
+    "reps": "6–10",
+    "rest": "2 mnt",
+    "restSeconds": 120,
+    "equipment": [
+      "Barbell",
+      "incline bench"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=incline+barbell+press+proper+form"
+  },
+  {
+    "id": "push-assisted-chest-dips",
+    "name": "Assisted Chest Dips",
+    "split": "Push",
+    "primaryMuscles": [
+      "Dada bawah/sternal"
+    ],
+    "secondaryMuscles": [
+      "Triceps",
+      "deltoid depan"
+    ],
+    "sets": "2–3",
+    "reps": "8–12",
+    "rest": "90–120 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Assisted dip"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=assisted+chest+dips+proper+form"
+  },
+  {
+    "id": "push-pec-deck-fly",
+    "name": "Pec Deck Fly",
+    "split": "Push",
+    "primaryMuscles": [
+      "Dada"
+    ],
+    "secondaryMuscles": [
+      "Deltoid depan"
+    ],
+    "sets": "2–3",
+    "reps": "12–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Pec deck"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=pec+deck+fly+proper+form"
+  },
+  {
+    "id": "push-cable-chest-fly",
+    "name": "Cable Chest Fly",
+    "split": "Push",
+    "primaryMuscles": [
+      "Dada"
+    ],
+    "secondaryMuscles": [
+      "Deltoid depan"
+    ],
+    "sets": "2–3",
+    "reps": "12–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Cable crossover"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=cable+chest+fly+proper+form"
+  },
+  {
+    "id": "push-low-to-high-cable-fly",
+    "name": "Low-to-High Cable Fly",
+    "split": "Push",
+    "primaryMuscles": [
+      "Upper chest"
+    ],
+    "secondaryMuscles": [
+      "Deltoid depan"
+    ],
+    "sets": "2",
+    "reps": "12–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Cable"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=low-to-high+cable+fly+proper+form"
+  },
+  {
+    "id": "push-high-to-low-cable-fly",
+    "name": "High-to-Low Cable Fly",
+    "split": "Push",
+    "primaryMuscles": [
+      "Dada tengah/bawah"
+    ],
+    "secondaryMuscles": [
+      "Deltoid depan"
+    ],
+    "sets": "2",
+    "reps": "12–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Cable"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=high-to-low+cable+fly+proper+form"
+  },
+  {
+    "id": "push-seated-db-shoulder-press",
+    "name": "Seated DB Shoulder Press",
+    "split": "Push",
+    "primaryMuscles": [
+      "Deltoid depan/samping"
+    ],
+    "secondaryMuscles": [
+      "Triceps"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "90–120 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Dumbbell",
+      "bench"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=seated+db+shoulder+press+proper+form"
+  },
+  {
+    "id": "push-machine-shoulder-press",
+    "name": "Machine Shoulder Press",
+    "split": "Push",
+    "primaryMuscles": [
+      "Deltoid depan/samping"
+    ],
+    "secondaryMuscles": [
+      "Triceps"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "90–120 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Shoulder press"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=machine+shoulder+press+proper+form"
+  },
+  {
+    "id": "push-standing-barbell-ohp",
+    "name": "Standing Barbell OHP",
+    "split": "Push",
+    "primaryMuscles": [
+      "Deltoid"
+    ],
+    "secondaryMuscles": [
+      "Triceps",
+      "core"
+    ],
+    "sets": "3",
+    "reps": "6–10",
+    "rest": "2 mnt",
+    "restSeconds": 120,
+    "equipment": [
+      "Barbell",
+      "rack"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=standing+barbell+ohp+proper+form"
+  },
+  {
+    "id": "push-db-lateral-raise",
+    "name": "DB Lateral Raise",
+    "split": "Push",
+    "primaryMuscles": [
+      "Deltoid samping"
+    ],
+    "secondaryMuscles": [
+      "Supraspinatus",
+      "traps"
+    ],
+    "sets": "3",
+    "reps": "12–20",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Dumbbell"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=db+lateral+raise+proper+form"
+  },
+  {
+    "id": "push-single-arm-cable-lateral-raise",
+    "name": "Single-Arm Cable Lateral Raise",
+    "split": "Push",
+    "primaryMuscles": [
+      "Deltoid samping"
+    ],
+    "secondaryMuscles": [
+      "Supraspinatus"
+    ],
+    "sets": "2–3",
+    "reps": "12–15/sisi",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Cable",
+      "handle"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=single-arm+cable+lateral+raise+proper+form"
+  },
+  {
+    "id": "push-machine-lateral-raise",
+    "name": "Machine Lateral Raise",
+    "split": "Push",
+    "primaryMuscles": [
+      "Deltoid samping"
+    ],
+    "secondaryMuscles": [
+      "Supraspinatus"
+    ],
+    "sets": "2–3",
+    "reps": "12–20",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Lateral raise machine"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=machine+lateral+raise+proper+form"
+  },
+  {
+    "id": "push-arnold-press",
+    "name": "Arnold Press",
+    "split": "Push",
+    "primaryMuscles": [
+      "Deltoid depan/samping"
+    ],
+    "secondaryMuscles": [
+      "Triceps"
+    ],
+    "sets": "2–3",
+    "reps": "10–12",
+    "rest": "90 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Dumbbell"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=arnold+press+proper+form"
+  },
+  {
+    "id": "push-rope-triceps-pushdown",
+    "name": "Rope Triceps Pushdown",
+    "split": "Push",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [],
+    "sets": "3",
+    "reps": "10–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Cable",
+      "rope"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=rope+triceps+pushdown+proper+form"
+  },
+  {
+    "id": "push-straight-bar-pushdown",
+    "name": "Straight-Bar Pushdown",
+    "split": "Push",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [],
+    "sets": "2–3",
+    "reps": "10–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Cable",
+      "bar"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=straight-bar+pushdown+proper+form"
+  },
+  {
+    "id": "push-overhead-cable-extension",
+    "name": "Overhead Cable Extension",
+    "split": "Push",
+    "primaryMuscles": [
+      "Triceps long head bias"
+    ],
+    "secondaryMuscles": [],
+    "sets": "2–3",
+    "reps": "10–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Cable",
+      "rope"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=overhead+cable+extension+proper+form"
+  },
+  {
+    "id": "push-db-overhead-extension",
+    "name": "DB Overhead Extension",
+    "split": "Push",
+    "primaryMuscles": [
+      "Triceps long head bias"
+    ],
+    "secondaryMuscles": [],
+    "sets": "2–3",
+    "reps": "10–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Dumbbell"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=db+overhead+extension+proper+form"
+  },
+  {
+    "id": "push-ez-bar-skull-crusher",
+    "name": "EZ-Bar Skull Crusher",
+    "split": "Push",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [],
+    "sets": "2–3",
+    "reps": "8–12",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "EZ bar",
+      "bench"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=ez-bar+skull+crusher+proper+form"
+  },
+  {
+    "id": "push-assisted-triceps-dips",
+    "name": "Assisted Triceps Dips",
+    "split": "Push",
+    "primaryMuscles": [
+      "Triceps"
+    ],
+    "secondaryMuscles": [
+      "Dada",
+      "deltoid depan"
+    ],
+    "sets": "2–3",
+    "reps": "8–12",
+    "rest": "90 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Assisted dip"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=assisted+triceps+dips+proper+form"
+  },
+  {
+    "id": "pull-lat-pulldown",
+    "name": "Lat Pulldown",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Lats"
+    ],
+    "secondaryMuscles": [
+      "Biceps",
+      "brachialis",
+      "upper back"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "90–120 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Pulldown machine"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=lat+pulldown+proper+form"
+  },
+  {
+    "id": "pull-assisted-pull-up",
+    "name": "Assisted Pull-Up",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Lats",
+      "teres major"
+    ],
+    "secondaryMuscles": [
+      "Biceps",
+      "mid-back"
+    ],
+    "sets": "3",
+    "reps": "6–10",
+    "rest": "90–150 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Assisted pull-up"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=assisted+pull-up+proper+form"
+  },
+  {
+    "id": "pull-neutral-close-pulldown",
+    "name": "Neutral/Close Pulldown",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Lats"
+    ],
+    "secondaryMuscles": [
+      "Biceps",
+      "mid-back"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "90–120 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Pulldown + V handle"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=neutral/close+pulldown+proper+form"
+  },
+  {
+    "id": "pull-barbell-bent-over-row",
+    "name": "Barbell Bent-Over Row",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Mid-back",
+      "lats",
+      "rhomboids"
+    ],
+    "secondaryMuscles": [
+      "Biceps",
+      "rear delts",
+      "erectors"
+    ],
+    "sets": "3",
+    "reps": "6–10",
+    "rest": "2 mnt",
+    "restSeconds": 120,
+    "equipment": [
+      "Barbell"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=barbell+bent-over+row+proper+form"
+  },
+  {
+    "id": "pull-chest-supported-row",
+    "name": "Chest-Supported Row",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Mid-back",
+      "rhomboids",
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "Rear delts",
+      "biceps"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "90–120 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Row machine/bench"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=chest-supported+row+proper+form"
+  },
+  {
+    "id": "pull-seated-cable-row",
+    "name": "Seated Cable Row",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Mid-back",
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "Biceps",
+      "rear delts"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "90–120 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Cable row"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=seated+cable+row+proper+form"
+  },
+  {
+    "id": "pull-single-arm-db-row",
+    "name": "Single-Arm DB Row",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Lats",
+      "mid-back"
+    ],
+    "secondaryMuscles": [
+      "Biceps",
+      "rear delts"
+    ],
+    "sets": "3",
+    "reps": "8–12/sisi",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "DB",
+      "bench"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=single-arm+db+row+proper+form"
+  },
+  {
+    "id": "pull-t-bar-row",
+    "name": "T-Bar Row",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Mid-back",
+      "lats"
+    ],
+    "secondaryMuscles": [
+      "Biceps",
+      "rear delts"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "90–120 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "T-bar/landmine"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=t-bar+row+proper+form"
+  },
+  {
+    "id": "pull-straight-arm-pulldown",
+    "name": "Straight-Arm Pulldown",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Lats"
+    ],
+    "secondaryMuscles": [
+      "Teres major",
+      "shoulder stabilizers"
+    ],
+    "sets": "2–3",
+    "reps": "12–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Cable",
+      "bar/rope"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=straight-arm+pulldown+proper+form"
+  },
+  {
+    "id": "pull-face-pull",
+    "name": "Face Pull",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Rear delts",
+      "mid/lower traps"
+    ],
+    "secondaryMuscles": [
+      "Rotator cuff",
+      "rhomboids"
+    ],
+    "sets": "2–3",
+    "reps": "12–20",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Cable",
+      "rope"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=face+pull+proper+form"
+  },
+  {
+    "id": "pull-reverse-pec-deck",
+    "name": "Reverse Pec Deck",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Rear delts"
+    ],
+    "secondaryMuscles": [
+      "Rhomboids",
+      "middle traps"
+    ],
+    "sets": "2–3",
+    "reps": "12–20",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Reverse pec deck"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=reverse+pec+deck+proper+form"
+  },
+  {
+    "id": "pull-db-shrug",
+    "name": "DB Shrug",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Upper traps"
+    ],
+    "secondaryMuscles": [
+      "Forearms",
+      "grip"
+    ],
+    "sets": "2–3",
+    "reps": "10–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Dumbbell"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=db+shrug+proper+form"
+  },
+  {
+    "id": "pull-db-biceps-curl",
+    "name": "DB Biceps Curl",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Biceps"
+    ],
+    "secondaryMuscles": [
+      "Brachialis",
+      "brachioradialis"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Dumbbell"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=db+biceps+curl+proper+form"
+  },
+  {
+    "id": "pull-ez-bar-curl",
+    "name": "EZ-Bar Curl",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Biceps"
+    ],
+    "secondaryMuscles": [
+      "Brachialis",
+      "brachioradialis"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "EZ bar"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=ez-bar+curl+proper+form"
+  },
+  {
+    "id": "pull-incline-db-curl",
+    "name": "Incline DB Curl",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Biceps",
+      "long-head emphasis"
+    ],
+    "secondaryMuscles": [
+      "Brachialis"
+    ],
+    "sets": "2–3",
+    "reps": "10–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Incline bench",
+      "DB"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=incline+db+curl+proper+form"
+  },
+  {
+    "id": "pull-hammer-curl",
+    "name": "Hammer Curl",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Brachialis",
+      "brachioradialis"
+    ],
+    "secondaryMuscles": [
+      "Biceps"
+    ],
+    "sets": "2–3",
+    "reps": "10–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Dumbbell"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=hammer+curl+proper+form"
+  },
+  {
+    "id": "pull-preacher-curl-machine",
+    "name": "Preacher Curl Machine",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Biceps"
+    ],
+    "secondaryMuscles": [
+      "Brachialis"
+    ],
+    "sets": "2–3",
+    "reps": "10–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Preacher machine"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=preacher+curl+machine+proper+form"
+  },
+  {
+    "id": "pull-cable-biceps-curl",
+    "name": "Cable Biceps Curl",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Biceps"
+    ],
+    "secondaryMuscles": [
+      "Brachialis"
+    ],
+    "sets": "2–3",
+    "reps": "10–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Cable"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=cable+biceps+curl+proper+form"
+  },
+  {
+    "id": "pull-reverse-ez-bar-curl",
+    "name": "Reverse EZ-Bar Curl",
+    "split": "Pull",
+    "primaryMuscles": [
+      "Brachioradialis",
+      "brachialis"
+    ],
+    "secondaryMuscles": [
+      "Biceps"
+    ],
+    "sets": "2",
+    "reps": "12–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "EZ bar"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=reverse+ez-bar+curl+proper+form"
+  },
+  {
+    "id": "legs-barbell-back-squat",
+    "name": "Barbell Back Squat",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Quadriceps",
+      "glute max"
+    ],
+    "secondaryMuscles": [
+      "Adductors",
+      "core",
+      "erectors"
+    ],
+    "sets": "3",
+    "reps": "6–10",
+    "rest": "2–3 mnt",
+    "restSeconds": 120,
+    "equipment": [
+      "Barbell",
+      "rack",
+      "safeties"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=barbell+back+squat+proper+form"
+  },
+  {
+    "id": "legs-goblet-squat",
+    "name": "Goblet Squat",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Quadriceps",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "Core",
+      "adductors"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "90–120 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "DB/kettlebell"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=goblet+squat+proper+form"
+  },
+  {
+    "id": "legs-45-leg-press",
+    "name": "45° Leg Press",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Quadriceps",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "Adductors"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "2 mnt",
+    "restSeconds": 120,
+    "equipment": [
+      "Leg press"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=45°+leg+press+proper+form"
+  },
+  {
+    "id": "legs-hack-squat",
+    "name": "Hack Squat",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Quadriceps",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "Adductors"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "2 mnt",
+    "restSeconds": 120,
+    "equipment": [
+      "Hack squat"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=hack+squat+proper+form"
+  },
+  {
+    "id": "legs-front-squat",
+    "name": "Front Squat",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Quadriceps"
+    ],
+    "secondaryMuscles": [
+      "Core",
+      "glutes"
+    ],
+    "sets": "3",
+    "reps": "6–10",
+    "rest": "2–3 mnt",
+    "restSeconds": 120,
+    "equipment": [
+      "Barbell",
+      "rack"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=front+squat+proper+form"
+  },
+  {
+    "id": "legs-leg-extension",
+    "name": "Leg Extension",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Quadriceps"
+    ],
+    "secondaryMuscles": [],
+    "sets": "2–3",
+    "reps": "10–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Leg extension"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=leg+extension+proper+form"
+  },
+  {
+    "id": "legs-romanian-deadlift",
+    "name": "Romanian Deadlift",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Hamstrings",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "Erectors",
+      "adductors"
+    ],
+    "sets": "3",
+    "reps": "8–10",
+    "rest": "2 mnt",
+    "restSeconds": 120,
+    "equipment": [
+      "Barbell/DB"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=romanian+deadlift+proper+form"
+  },
+  {
+    "id": "legs-db-romanian-deadlift",
+    "name": "DB Romanian Deadlift",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Hamstrings",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "Erectors"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "90–120 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Dumbbell"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=db+romanian+deadlift+proper+form"
+  },
+  {
+    "id": "legs-seated-leg-curl",
+    "name": "Seated Leg Curl",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Hamstrings"
+    ],
+    "secondaryMuscles": [
+      "Gastrocnemius"
+    ],
+    "sets": "3",
+    "reps": "10–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Seated curl"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=seated+leg+curl+proper+form"
+  },
+  {
+    "id": "legs-lying-leg-curl",
+    "name": "Lying Leg Curl",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Hamstrings"
+    ],
+    "secondaryMuscles": [
+      "Gastrocnemius"
+    ],
+    "sets": "2–3",
+    "reps": "10–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Lying curl"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=lying+leg+curl+proper+form"
+  },
+  {
+    "id": "legs-single-leg-rdl",
+    "name": "Single-Leg RDL",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Hamstrings",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "Hip stabilizers"
+    ],
+    "sets": "2–3",
+    "reps": "8–12/sisi",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Dumbbell"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=single-leg+rdl+proper+form"
+  },
+  {
+    "id": "legs-barbell-hip-thrust",
+    "name": "Barbell Hip Thrust",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Glute max"
+    ],
+    "secondaryMuscles": [
+      "Hamstrings",
+      "adductors"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "90–120 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Barbell",
+      "bench",
+      "pad"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=barbell+hip+thrust+proper+form"
+  },
+  {
+    "id": "legs-smith-hip-thrust",
+    "name": "Smith Hip Thrust",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Glute max"
+    ],
+    "secondaryMuscles": [
+      "Hamstrings"
+    ],
+    "sets": "3",
+    "reps": "8–12",
+    "rest": "90–120 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Smith",
+      "bench"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=smith+hip+thrust+proper+form"
+  },
+  {
+    "id": "legs-cable-glute-kickback",
+    "name": "Cable Glute Kickback",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Glute max"
+    ],
+    "secondaryMuscles": [
+      "Glute medius"
+    ],
+    "sets": "2–3",
+    "reps": "12–15/kaki",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Cable",
+      "ankle strap"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=cable+glute+kickback+proper+form"
+  },
+  {
+    "id": "legs-45-back-extension-glute-bias",
+    "name": "45° Back Extension (glute bias)",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Glutes",
+      "hamstrings"
+    ],
+    "secondaryMuscles": [
+      "Erectors"
+    ],
+    "sets": "2–3",
+    "reps": "10–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "45° bench"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=45°+back+extension+(glute+bias)+proper+form"
+  },
+  {
+    "id": "legs-bulgarian-split-squat",
+    "name": "Bulgarian Split Squat",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Quadriceps",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "Adductors",
+      "hip stabilizers"
+    ],
+    "sets": "2",
+    "reps": "8–12/kaki",
+    "rest": "90–120 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Bench",
+      "DB optional"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=bulgarian+split+squat+proper+form"
+  },
+  {
+    "id": "legs-walking-lunge",
+    "name": "Walking Lunge",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Quadriceps",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "Hamstrings",
+      "core"
+    ],
+    "sets": "2",
+    "reps": "10–12 langkah/kaki",
+    "rest": "90 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "DB optional"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=walking+lunge+proper+form"
+  },
+  {
+    "id": "legs-reverse-lunge",
+    "name": "Reverse Lunge",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Quadriceps",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "Hamstrings",
+      "core"
+    ],
+    "sets": "2–3",
+    "reps": "8–12/kaki",
+    "rest": "90 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "DB optional"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=reverse+lunge+proper+form"
+  },
+  {
+    "id": "legs-dumbbell-step-up",
+    "name": "Dumbbell Step-Up",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Quadriceps",
+      "glutes"
+    ],
+    "secondaryMuscles": [
+      "Hip stabilizers"
+    ],
+    "sets": "2–3",
+    "reps": "8–12/kaki",
+    "rest": "90 dtk",
+    "restSeconds": 5400,
+    "equipment": [
+      "Box/bench",
+      "DB"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=dumbbell+step-up+proper+form"
+  },
+  {
+    "id": "legs-standing-calf-raise",
+    "name": "Standing Calf Raise",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Gastrocnemius"
+    ],
+    "secondaryMuscles": [
+      "Soleus"
+    ],
+    "sets": "3",
+    "reps": "10–15",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Standing calf machine"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=standing+calf+raise+proper+form"
+  },
+  {
+    "id": "legs-seated-calf-raise",
+    "name": "Seated Calf Raise",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Soleus"
+    ],
+    "secondaryMuscles": [
+      "Gastrocnemius"
+    ],
+    "sets": "3",
+    "reps": "12–20",
+    "rest": "60–90 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Seated calf machine"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=seated+calf+raise+proper+form"
+  },
+  {
+    "id": "legs-single-leg-calf-raise",
+    "name": "Single-Leg Calf Raise",
+    "split": "Legs",
+    "primaryMuscles": [
+      "Calves"
+    ],
+    "secondaryMuscles": [
+      "Ankle stabilizers"
+    ],
+    "sets": "2",
+    "reps": "12–20/kaki",
+    "rest": "60 dtk",
+    "restSeconds": 3600,
+    "equipment": [
+      "Step",
+      "DB optional"
+    ],
+    "tutorialUrl": "https://www.youtube.com/results?search_query=single-leg+calf+raise+proper+form"
+  }
+]
