@@ -36,3 +36,8 @@ Sebagian besar tautan pada katalog adalah pencarian YouTube berbasis nama geraka
 - Citation ID web dari percakapan sebelumnya tidak bisa dipakai sebagai sitasi lintas proyek.
 - URL pencarian YouTube bukan embed video.
 - Periksa ulang sumber dan tanggal sebelum mempublikasikan.
+
+## Media detail latihan (diperbarui 12 November 2026)
+- Foto posisi awal/akhir: free-exercise-db (github.com/yuhonas/free-exercise-db, lisensi Unlicense/domain publik), dikompres ke WebP di `public/exercises/<imageId>/`. Field `imageSource` mencatat nama latihan sumber; sebagian adalah gerakan serupa, bukan alat yang persis sama (mis. Machine Lateral Raise memakai foto Seated Side Lateral Raise).
+- Video tutorial: satu video per latihan di `tutorialVideoId`. Setiap ID diverifikasi ke endpoint oEmbed YouTube (ada dan bisa di-embed) pada tanggal di `tutorialVideoChecked`; judul dan kanal disalin dari oEmbed. Kecocokan gerakan dinilai dari judul, kanal, dan durasi, bukan dari menonton tiap video penuh.
+- Diagram otot: `react-body-highlighter` (MIT). Nama otot di `exercises.json` dipetakan ke slug diagram di `src/media.tsx`; supraspinatus, rotator cuff, dan stabilizer tidak bisa digambar dan hanya tampil sebagai label.

@@ -13,6 +13,7 @@
     "idb": "latest",
     "lucide-react": "latest",
     "react": "latest",
+    "react-body-highlighter": "^2.0.5",
     "react-dom": "latest",
     "react-router-dom": "latest",
     "recharts": "latest",

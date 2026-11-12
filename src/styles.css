@@ -7,3 +7,24 @@
 @media(max-width:700px){.planner-tools{align-items:flex-end;flex-direction:column}.planner-tools .secondary-btn{font-size:10px}}
 .logger-head-actions{display:flex;align-items:center;gap:5px}.mini-icon{width:25px;height:25px;border:1px solid var(--border);border-radius:6px;background:var(--panel2);display:grid;place-items:center;color:var(--subtle)}.mini-icon:disabled{opacity:.25;cursor:default}
 @media(max-width:700px){.logger-head-actions{gap:2px}.mini-icon{width:23px;height:23px}.logger-ex-head .text-btn{padding:4px}}
+.exercise-art.has-img{height:auto;aspect-ratio:3/2;background:#fff}
+.exercise-art.has-img img{width:100%;height:100%;object-fit:cover;display:block}
+.exercise-art.has-img>span{z-index:1;background:#101311cc;color:#fff;padding:3px 6px;border-radius:4px;opacity:1}
+.detail-video{margin-bottom:15px;overflow:hidden}
+.video-embed{margin:0}
+.video-frame{position:relative;aspect-ratio:16/9;background:#000}
+.video-frame iframe,.video-frame button{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-frame button{background:center/cover no-repeat #000;display:grid;place-items:center;cursor:pointer;padding:0}
+.video-frame button svg{box-sizing:content-box;padding:15px 15px 15px 17px;border-radius:50%;background:var(--accent);color:#101311;box-shadow:0 4px 18px #0006}
+.video-embed figcaption{padding:11px 14px 0;font:600 12px/1.4 Manrope}
+.video-embed figcaption span{color:var(--muted);font-weight:500}
+.detail-video .youtube-link{margin:11px 14px 14px}
+.muscle-map{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:250px;margin:4px auto 6px}
+.detail-section h3.legend{display:flex;align-items:center;gap:7px;margin:12px 0 8px;color:var(--subtle)}
+.detail-section h3.legend::before{content:'';width:9px;height:9px;border-radius:50%;background:var(--orange)}
+.detail-section h3.legend.primary::before{background:var(--accent)}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.shots figure{margin:0}
+.shots img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;border-radius:8px;border:1px solid var(--border);background:#fff;display:block}
+.shots figcaption{font:9px 'DM Mono';color:var(--muted);letter-spacing:.5px;margin-top:5px;text-transform:uppercase}
+.shots-credit{font-size:10px;margin:0 0 12px}

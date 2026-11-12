@@ -19,7 +19,13 @@
       "bench",
       "rack"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=barbell+bench+press+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=barbell+bench+press+proper+form",
+    "imageId": "Barbell_Bench_Press_-_Medium_Grip",
+    "imageSource": "Barbell Bench Press - Medium Grip",
+    "tutorialVideoId": "gRVjAtPip0Y",
+    "tutorialVideoTitle": "How to Perform Bench Press - Tutorial & Proper Form",
+    "tutorialVideoChannel": "Buff Dudes",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-incline-db-press",
@@ -40,7 +46,13 @@
       "Dumbbell",
       "incline bench"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=incline+db+press+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=incline+db+press+proper+form",
+    "imageId": "Incline_Dumbbell_Press",
+    "imageSource": "Incline Dumbbell Press",
+    "tutorialVideoId": "8iPEnn-ltC8",
+    "tutorialVideoTitle": "How To: Dumbbell Incline Chest Press",
+    "tutorialVideoChannel": "ScottHermanFitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-flat-db-press",
@@ -61,7 +73,13 @@
       "Dumbbell",
       "bench"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=flat+db+press+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=flat+db+press+proper+form",
+    "imageId": "Dumbbell_Bench_Press",
+    "imageSource": "Dumbbell Bench Press",
+    "tutorialVideoId": "VmB1G1K7v94",
+    "tutorialVideoTitle": "How To: Dumbbell Chest Press",
+    "tutorialVideoChannel": "ScottHermanFitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-machine-chest-press",
@@ -81,7 +99,13 @@
     "equipment": [
       "Chest press machine"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=machine+chest+press+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=machine+chest+press+proper+form",
+    "imageId": "Machine_Bench_Press",
+    "imageSource": "Machine Bench Press",
+    "tutorialVideoId": "xUm0BiZCWlQ",
+    "tutorialVideoTitle": "How To: Chest Press (Cybex)",
+    "tutorialVideoChannel": "ScottHermanFitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-incline-barbell-press",
@@ -102,7 +126,13 @@
       "Barbell",
       "incline bench"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=incline+barbell+press+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=incline+barbell+press+proper+form",
+    "imageId": "Barbell_Incline_Bench_Press_-_Medium_Grip",
+    "imageSource": "Barbell Incline Bench Press - Medium Grip",
+    "tutorialVideoId": "DbFgADa2PL8",
+    "tutorialVideoTitle": "How To: Barbell Incline Chest Press",
+    "tutorialVideoChannel": "ScottHermanFitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-assisted-chest-dips",
@@ -122,7 +152,13 @@
     "equipment": [
       "Assisted dip"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=assisted+chest+dips+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=assisted+chest+dips+proper+form",
+    "imageId": "Dips_-_Chest_Version",
+    "imageSource": "Dips - Chest Version",
+    "tutorialVideoId": "7274wh7VSAo",
+    "tutorialVideoTitle": "Machine Assisted Chest Dips | FULL TUTORIAL | Best techniques for MORE CHEST ACTIVATION!",
+    "tutorialVideoChannel": "ATLASTHETICS",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-pec-deck-fly",
@@ -141,7 +177,13 @@
     "equipment": [
       "Pec deck"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=pec+deck+fly+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=pec+deck+fly+proper+form",
+    "imageId": "Butterfly",
+    "imageSource": "Butterfly",
+    "tutorialVideoId": "H4mVGHaK2f4",
+    "tutorialVideoTitle": "How to PERFECT The Pec Deck | (CHEST FLY MISTAKES & TIPS)",
+    "tutorialVideoChannel": "Colossus Fitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-cable-chest-fly",
@@ -160,7 +202,13 @@
     "equipment": [
       "Cable crossover"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=cable+chest+fly+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=cable+chest+fly+proper+form",
+    "imageId": "Cable_Crossover",
+    "imageSource": "Cable Crossover",
+    "tutorialVideoId": "4Y8QgiT2-OA",
+    "tutorialVideoTitle": "Mid-Cable Chest Fly | Proper Technique & Common Mistakes",
+    "tutorialVideoChannel": "Physique Development",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-low-to-high-cable-fly",
@@ -179,7 +227,13 @@
     "equipment": [
       "Cable"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=low-to-high+cable+fly+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=low-to-high+cable+fly+proper+form",
+    "imageId": "Low_Cable_Crossover",
+    "imageSource": "Low Cable Crossover",
+    "tutorialVideoId": "eQ_NBB6OBH4",
+    "tutorialVideoTitle": "HOW TO: Chest \"Low-To-High\" Cable Fly (BIGGER UPPER CHEST) || PERFECT FORM",
+    "tutorialVideoChannel": "ScottHermanFitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-high-to-low-cable-fly",
@@ -198,7 +252,13 @@
     "equipment": [
       "Cable"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=high-to-low+cable+fly+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=high-to-low+cable+fly+proper+form",
+    "imageId": "Cable_Crossover",
+    "imageSource": "Cable Crossover",
+    "tutorialVideoId": "KwvJEXts2lg",
+    "tutorialVideoTitle": "How to: Cable Fly for Lower Chest (High to Low)",
+    "tutorialVideoChannel": "Physique Development",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-seated-db-shoulder-press",
@@ -218,7 +278,13 @@
       "Dumbbell",
       "bench"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=seated+db+shoulder+press+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=seated+db+shoulder+press+proper+form",
+    "imageId": "Dumbbell_Shoulder_Press",
+    "imageSource": "Dumbbell Shoulder Press",
+    "tutorialVideoId": "rO_iEImwHyo",
+    "tutorialVideoTitle": "How to do the SEATED DUMBBELL SHOULDER PRESS! | 2 Minute Tutorial",
+    "tutorialVideoChannel": "Max Euceda",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-machine-shoulder-press",
@@ -237,7 +303,13 @@
     "equipment": [
       "Shoulder press"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=machine+shoulder+press+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=machine+shoulder+press+proper+form",
+    "imageId": "Machine_Shoulder_Military_Press",
+    "imageSource": "Machine Shoulder (Military) Press",
+    "tutorialVideoId": "3R14MnZbcpw",
+    "tutorialVideoTitle": "How to PROPERLY Shoulder Machine Press (LEARN FAST)",
+    "tutorialVideoChannel": "Colossus Fitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-standing-barbell-ohp",
@@ -258,7 +330,13 @@
       "Barbell",
       "rack"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=standing+barbell+ohp+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=standing+barbell+ohp+proper+form",
+    "imageId": "Standing_Military_Press",
+    "imageSource": "Standing Military Press",
+    "tutorialVideoId": "2yjwXTZQDDI",
+    "tutorialVideoTitle": "How To: Standing Straight-Bar Military / Overhead Press",
+    "tutorialVideoChannel": "ScottHermanFitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-db-lateral-raise",
@@ -278,7 +356,13 @@
     "equipment": [
       "Dumbbell"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=db+lateral+raise+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=db+lateral+raise+proper+form",
+    "imageId": "Side_Lateral_Raise",
+    "imageSource": "Side Lateral Raise",
+    "tutorialVideoId": "Y29xKcze8Ik",
+    "tutorialVideoTitle": "How to Perform Dumbbell Lateral Raise | Form Tutorial",
+    "tutorialVideoChannel": "Physique Development",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-single-arm-cable-lateral-raise",
@@ -298,7 +382,13 @@
       "Cable",
       "handle"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=single-arm+cable+lateral+raise+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=single-arm+cable+lateral+raise+proper+form",
+    "imageId": "Cable_Seated_Lateral_Raise",
+    "imageSource": "Cable Seated Lateral Raise",
+    "tutorialVideoId": "epjuphvl0is",
+    "tutorialVideoTitle": "How To Do A Single Arm Cable Lateral Raise | Proper Form & Technique",
+    "tutorialVideoChannel": "Jack Cooper",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-machine-lateral-raise",
@@ -317,7 +407,13 @@
     "equipment": [
       "Lateral raise machine"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=machine+lateral+raise+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=machine+lateral+raise+proper+form",
+    "imageId": "Seated_Side_Lateral_Raise",
+    "imageSource": "Seated Side Lateral Raise",
+    "tutorialVideoId": "pyjvL1DlAfg",
+    "tutorialVideoTitle": "The RIGHT Way to Use the Lateral Raise Machine",
+    "tutorialVideoChannel": "Colossus Fitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-arnold-press",
@@ -336,7 +432,13 @@
     "equipment": [
       "Dumbbell"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=arnold+press+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=arnold+press+proper+form",
+    "imageId": "Arnold_Dumbbell_Press",
+    "imageSource": "Arnold Dumbbell Press",
+    "tutorialVideoId": "6Z15_WdXmVw",
+    "tutorialVideoTitle": "Arnold Press - Shoulder Exercise - Proper Form Tutorial",
+    "tutorialVideoChannel": "Buff Dudes",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-rope-triceps-pushdown",
@@ -354,7 +456,13 @@
       "Cable",
       "rope"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=rope+triceps+pushdown+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=rope+triceps+pushdown+proper+form",
+    "imageId": "Triceps_Pushdown_-_Rope_Attachment",
+    "imageSource": "Triceps Pushdown - Rope Attachment",
+    "tutorialVideoId": "qHDrQglWgS4",
+    "tutorialVideoTitle": "How to Perform Cable Rope Pushdown | Triceps Exercise Tutorial",
+    "tutorialVideoChannel": "Buff Dudes Workouts",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-straight-bar-pushdown",
@@ -372,7 +480,13 @@
       "Cable",
       "bar"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=straight-bar+pushdown+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=straight-bar+pushdown+proper+form",
+    "imageId": "Triceps_Pushdown",
+    "imageSource": "Triceps Pushdown",
+    "tutorialVideoId": "8JBHlaS7Dkk",
+    "tutorialVideoTitle": "Tricep Pushdown with Straight Bar | TWEAK THIS!",
+    "tutorialVideoChannel": "Nevels Fitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-overhead-cable-extension",
@@ -390,7 +504,13 @@
       "Cable",
       "rope"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=overhead+cable+extension+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=overhead+cable+extension+proper+form",
+    "imageId": "Cable_Rope_Overhead_Triceps_Extension",
+    "imageSource": "Cable Rope Overhead Triceps Extension",
+    "tutorialVideoId": "57fWTQID-1Y",
+    "tutorialVideoTitle": "How to PROPERLY Overhead Cable Tricep Extension (FIX THIS NOW!)",
+    "tutorialVideoChannel": "Colossus Fitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-db-overhead-extension",
@@ -407,7 +527,13 @@
     "equipment": [
       "Dumbbell"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=db+overhead+extension+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=db+overhead+extension+proper+form",
+    "imageId": "Standing_Dumbbell_Triceps_Extension",
+    "imageSource": "Standing Dumbbell Triceps Extension",
+    "tutorialVideoId": "-Vyt2QdsR7E",
+    "tutorialVideoTitle": "How To: Standing Overhead Dumbbell Tricep Extension",
+    "tutorialVideoChannel": "ScottHermanFitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-ez-bar-skull-crusher",
@@ -425,7 +551,13 @@
       "EZ bar",
       "bench"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=ez-bar+skull+crusher+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=ez-bar+skull+crusher+proper+form",
+    "imageId": "EZ-Bar_Skullcrusher",
+    "imageSource": "EZ-Bar Skullcrusher",
+    "tutorialVideoId": "d_KZxkY_0cM",
+    "tutorialVideoTitle": "How To: Skull Crushers",
+    "tutorialVideoChannel": "ScottHermanFitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "push-assisted-triceps-dips",
@@ -445,7 +577,13 @@
     "equipment": [
       "Assisted dip"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=assisted+triceps+dips+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=assisted+triceps+dips+proper+form",
+    "imageId": "Dips_-_Triceps_Version",
+    "imageSource": "Dips - Triceps Version",
+    "tutorialVideoId": "kbmVlw-i0Vs",
+    "tutorialVideoTitle": "Exercise Tutorial: Assisted Dips",
+    "tutorialVideoChannel": "Travis Tarrant",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-lat-pulldown",
@@ -466,7 +604,13 @@
     "equipment": [
       "Pulldown machine"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=lat+pulldown+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=lat+pulldown+proper+form",
+    "imageId": "Wide-Grip_Lat_Pulldown",
+    "imageSource": "Wide-Grip Lat Pulldown",
+    "tutorialVideoId": "SALxEARiMkw",
+    "tutorialVideoTitle": "How to do Lat Pulldowns (AVOID MISTAKES!)",
+    "tutorialVideoChannel": "ATHLEAN-X™",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-assisted-pull-up",
@@ -487,7 +631,13 @@
     "equipment": [
       "Assisted pull-up"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=assisted+pull-up+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=assisted+pull-up+proper+form",
+    "imageId": "Band_Assisted_Pull-Up",
+    "imageSource": "Band Assisted Pull-Up",
+    "tutorialVideoId": "gx0RWT7WbmA",
+    "tutorialVideoTitle": "How To PROPERLY Use The Assisted Pull Up Machine (DO MORE PULL UPS)",
+    "tutorialVideoChannel": "Colossus Fitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-neutral-close-pulldown",
@@ -507,7 +657,13 @@
     "equipment": [
       "Pulldown + V handle"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=neutral/close+pulldown+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=neutral/close+pulldown+proper+form",
+    "imageId": "V-Bar_Pulldown",
+    "imageSource": "V-Bar Pulldown",
+    "tutorialVideoId": "4P3-TXbH4tw",
+    "tutorialVideoTitle": "Neutral-Grip Pulldown Tutorial",
+    "tutorialVideoChannel": "Merrick Lincoln, DPT, CSCS",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-barbell-bent-over-row",
@@ -530,7 +686,13 @@
     "equipment": [
       "Barbell"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=barbell+bent-over+row+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=barbell+bent-over+row+proper+form",
+    "imageId": "Bent_Over_Barbell_Row",
+    "imageSource": "Bent Over Barbell Row",
+    "tutorialVideoId": "FWJR5Ve8bnQ",
+    "tutorialVideoTitle": "How to do the BENT-OVER BARBELL ROW! | 2 Minute Tutorial",
+    "tutorialVideoChannel": "Max Euceda",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-chest-supported-row",
@@ -552,7 +714,13 @@
     "equipment": [
       "Row machine/bench"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=chest-supported+row+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=chest-supported+row+proper+form",
+    "imageId": "Dumbbell_Incline_Row",
+    "imageSource": "Dumbbell Incline Row",
+    "tutorialVideoId": "ro2vfHfD0DQ",
+    "tutorialVideoTitle": "How To Do A Chest Supported Dumbbell Row Correctly",
+    "tutorialVideoChannel": "Jack Hanrahan Fitness ",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-seated-cable-row",
@@ -573,7 +741,13 @@
     "equipment": [
       "Cable row"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=seated+cable+row+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=seated+cable+row+proper+form",
+    "imageId": "Seated_Cable_Rows",
+    "imageSource": "Seated Cable Rows",
+    "tutorialVideoId": "GZbfZ033f74",
+    "tutorialVideoTitle": "How To: Seated Low Row (LF Cable)",
+    "tutorialVideoChannel": "ScottHermanFitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-single-arm-db-row",
@@ -595,7 +769,13 @@
       "DB",
       "bench"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=single-arm+db+row+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=single-arm+db+row+proper+form",
+    "imageId": "One-Arm_Dumbbell_Row",
+    "imageSource": "One-Arm Dumbbell Row",
+    "tutorialVideoId": "dFzUjzfih7k",
+    "tutorialVideoTitle": "How to do the SINGLE ARM DUMBBELL ROW! | 2 Minute Tutorial",
+    "tutorialVideoChannel": "Max Euceda",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-t-bar-row",
@@ -616,7 +796,13 @@
     "equipment": [
       "T-bar/landmine"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=t-bar+row+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=t-bar+row+proper+form",
+    "imageId": "T-Bar_Row_with_Handle",
+    "imageSource": "T-Bar Row with Handle",
+    "tutorialVideoId": "j3Igk5nyZE4",
+    "tutorialVideoTitle": "How To: T-Bar Row",
+    "tutorialVideoChannel": "ScottHermanFitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-straight-arm-pulldown",
@@ -637,7 +823,13 @@
       "Cable",
       "bar/rope"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=straight-arm+pulldown+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=straight-arm+pulldown+proper+form",
+    "imageId": "Straight-Arm_Pulldown",
+    "imageSource": "Straight-Arm Pulldown",
+    "tutorialVideoId": "r34PR1mxzmU",
+    "tutorialVideoTitle": "Straight-Arm Pulldown - Back Exercise - Bodybuilding.com",
+    "tutorialVideoChannel": "Bodybuilding.com",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-face-pull",
@@ -659,7 +851,13 @@
       "Cable",
       "rope"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=face+pull+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=face+pull+proper+form",
+    "imageId": "Face_Pull",
+    "imageSource": "Face Pull",
+    "tutorialVideoId": "3pToT5_DUiY",
+    "tutorialVideoTitle": "How To Properly Perform Face Pulls For Rear Delts / Fix Your Form",
+    "tutorialVideoChannel": "Colossus Fitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-reverse-pec-deck",
@@ -679,7 +877,13 @@
     "equipment": [
       "Reverse pec deck"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=reverse+pec+deck+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=reverse+pec+deck+proper+form",
+    "imageId": "Reverse_Machine_Flyes",
+    "imageSource": "Reverse Machine Flyes",
+    "tutorialVideoId": "dC7jhEk-29A",
+    "tutorialVideoTitle": "How to PROPERLY Reverse Pec Deck Fly (DO THIS)",
+    "tutorialVideoChannel": "Colossus Fitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-db-shrug",
@@ -699,7 +903,13 @@
     "equipment": [
       "Dumbbell"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=db+shrug+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=db+shrug+proper+form",
+    "imageId": "Dumbbell_Shrug",
+    "imageSource": "Dumbbell Shrug",
+    "tutorialVideoId": "cJRVVxmytaM",
+    "tutorialVideoTitle": "How To: Dumbbell Shrugs",
+    "tutorialVideoChannel": "ScottHermanFitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-db-biceps-curl",
@@ -719,7 +929,13 @@
     "equipment": [
       "Dumbbell"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=db+biceps+curl+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=db+biceps+curl+proper+form",
+    "imageId": "Dumbbell_Bicep_Curl",
+    "imageSource": "Dumbbell Bicep Curl",
+    "tutorialVideoId": "sAq_ocpRh_I",
+    "tutorialVideoTitle": "How To: Alternating Dumbbell Curl",
+    "tutorialVideoChannel": "ScottHermanFitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-ez-bar-curl",
@@ -739,7 +955,13 @@
     "equipment": [
       "EZ bar"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=ez-bar+curl+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=ez-bar+curl+proper+form",
+    "imageId": "EZ-Bar_Curl",
+    "imageSource": "EZ-Bar Curl",
+    "tutorialVideoId": "zG2xJ0Q5QtI",
+    "tutorialVideoTitle": "How To: Inside-Grip Bicep Curl With E-Z Bar Curl",
+    "tutorialVideoChannel": "ScottHermanFitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-incline-db-curl",
@@ -760,7 +982,13 @@
       "Incline bench",
       "DB"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=incline+db+curl+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=incline+db+curl+proper+form",
+    "imageId": "Incline_Dumbbell_Curl",
+    "imageSource": "Incline Dumbbell Curl",
+    "tutorialVideoId": "DCe8f6vMe9A",
+    "tutorialVideoTitle": "Stop Screwing Up Incline Dumbbell Curls (PROPER FORM!)",
+    "tutorialVideoChannel": "ATHLEAN-X™",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-hammer-curl",
@@ -780,7 +1008,13 @@
     "equipment": [
       "Dumbbell"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=hammer+curl+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=hammer+curl+proper+form",
+    "imageId": "Hammer_Curls",
+    "imageSource": "Hammer Curls",
+    "tutorialVideoId": "BRVDS6HVR9Q",
+    "tutorialVideoTitle": "How To Perform HAMMER CURLS | Biceps Exercise Tutorial",
+    "tutorialVideoChannel": "Buff Dudes Workouts",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-preacher-curl-machine",
@@ -799,7 +1033,13 @@
     "equipment": [
       "Preacher machine"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=preacher+curl+machine+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=preacher+curl+machine+proper+form",
+    "imageId": "Machine_Preacher_Curls",
+    "imageSource": "Machine Preacher Curls",
+    "tutorialVideoId": "AR-oARBkYxI",
+    "tutorialVideoTitle": "How to PROPERLY DO Machine Bicep Curls (Machine Preacher Curls)",
+    "tutorialVideoChannel": "Colossus Fitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-cable-biceps-curl",
@@ -818,7 +1058,13 @@
     "equipment": [
       "Cable"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=cable+biceps+curl+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=cable+biceps+curl+proper+form",
+    "imageId": "Standing_Biceps_Cable_Curl",
+    "imageSource": "Standing Biceps Cable Curl",
+    "tutorialVideoId": "2MUEL4nL6hA",
+    "tutorialVideoTitle": "How to PROPERLY Cable Bicep Curl For Bigger Biceps (EASY FIX)",
+    "tutorialVideoChannel": "Colossus Fitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "pull-reverse-ez-bar-curl",
@@ -838,7 +1084,13 @@
     "equipment": [
       "EZ bar"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=reverse+ez-bar+curl+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=reverse+ez-bar+curl+proper+form",
+    "imageId": "Reverse_Barbell_Curl",
+    "imageSource": "Reverse Barbell Curl",
+    "tutorialVideoId": "ypfd1kaI1AU",
+    "tutorialVideoTitle": "Reverse Curl Exercise Tutorial | Fast Track Forearm Growth With One Exercise",
+    "tutorialVideoChannel": "Buff Dudes Workouts",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-barbell-back-squat",
@@ -862,7 +1114,13 @@
       "rack",
       "safeties"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=barbell+back+squat+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=barbell+back+squat+proper+form",
+    "imageId": "Barbell_Full_Squat",
+    "imageSource": "Barbell Full Squat",
+    "tutorialVideoId": "my0tLDaWyDU",
+    "tutorialVideoTitle": "How To Squat Correctly (NO BACK PAIN)",
+    "tutorialVideoChannel": "Squat University",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-goblet-squat",
@@ -883,7 +1141,13 @@
     "equipment": [
       "DB/kettlebell"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=goblet+squat+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=goblet+squat+proper+form",
+    "imageId": "Goblet_Squat",
+    "imageSource": "Goblet Squat",
+    "tutorialVideoId": "CkFzgR55gho",
+    "tutorialVideoTitle": "How to Perform Dumbbell Goblet Squat",
+    "tutorialVideoChannel": "Physique Development",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-45-leg-press",
@@ -903,7 +1167,13 @@
     "equipment": [
       "Leg press"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=45°+leg+press+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=45°+leg+press+proper+form",
+    "imageId": "Leg_Press",
+    "imageSource": "Leg Press",
+    "tutorialVideoId": "K5n2vg3oZa4",
+    "tutorialVideoTitle": "How to PROPERLY Leg Press (FIX YOUR FORM NOW)",
+    "tutorialVideoChannel": "Colossus Fitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-hack-squat",
@@ -923,7 +1193,13 @@
     "equipment": [
       "Hack squat"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=hack+squat+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=hack+squat+proper+form",
+    "imageId": "Hack_Squat",
+    "imageSource": "Hack Squat",
+    "tutorialVideoId": "fE5BWPy7uRc",
+    "tutorialVideoTitle": "How To PROPERLY Hack Squat With Proper Form",
+    "tutorialVideoChannel": "Colossus Fitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-front-squat",
@@ -944,7 +1220,13 @@
       "Barbell",
       "rack"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=front+squat+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=front+squat+proper+form",
+    "imageId": "Front_Barbell_Squat",
+    "imageSource": "Front Barbell Squat",
+    "tutorialVideoId": "v-mQm_droHg",
+    "tutorialVideoTitle": "HOW TO FRONT SQUAT: Build Bigger Quads & A Stronger Squat",
+    "tutorialVideoChannel": "Jeff Nippard",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-leg-extension",
@@ -961,7 +1243,13 @@
     "equipment": [
       "Leg extension"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=leg+extension+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=leg+extension+proper+form",
+    "imageId": "Leg_Extensions",
+    "imageSource": "Leg Extensions",
+    "tutorialVideoId": "YyvSfVjQeL0",
+    "tutorialVideoTitle": "How To: Leg Extension (Cybex)",
+    "tutorialVideoChannel": "ScottHermanFitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-romanian-deadlift",
@@ -982,7 +1270,13 @@
     "equipment": [
       "Barbell/DB"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=romanian+deadlift+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=romanian+deadlift+proper+form",
+    "imageId": "Romanian_Deadlift",
+    "imageSource": "Romanian Deadlift",
+    "tutorialVideoId": "_oyxCn2iSjU",
+    "tutorialVideoTitle": "HOW TO DO ROMANIAN DEADLIFTS (RDLs): Build Beefy Hamstrings With Perfect Technique",
+    "tutorialVideoChannel": "Jeff Nippard",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-db-romanian-deadlift",
@@ -1002,7 +1296,13 @@
     "equipment": [
       "Dumbbell"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=db+romanian+deadlift+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=db+romanian+deadlift+proper+form",
+    "imageId": "Stiff-Legged_Dumbbell_Deadlift",
+    "imageSource": "Stiff-Legged Dumbbell Deadlift",
+    "tutorialVideoId": "uUjqvxEWcbo",
+    "tutorialVideoTitle": "Dumbbell Romanian Deadlift (RDL) | TECHNIQUE for Beginners",
+    "tutorialVideoChannel": "Mobility Doc",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-seated-leg-curl",
@@ -1021,7 +1321,13 @@
     "equipment": [
       "Seated curl"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=seated+leg+curl+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=seated+leg+curl+proper+form",
+    "imageId": "Seated_Leg_Curl",
+    "imageSource": "Seated Leg Curl",
+    "tutorialVideoId": "oFxEDkppbSQ",
+    "tutorialVideoTitle": "How to Seated Hamstring Machine Leg Curl | Proper Technique, Set Up, & Mistakes",
+    "tutorialVideoChannel": "Physique Development",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-lying-leg-curl",
@@ -1040,7 +1346,13 @@
     "equipment": [
       "Lying curl"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=lying+leg+curl+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=lying+leg+curl+proper+form",
+    "imageId": "Lying_Leg_Curls",
+    "imageSource": "Lying Leg Curls",
+    "tutorialVideoId": "vl5nUdE9mWM",
+    "tutorialVideoTitle": "How to Lying Leg Curl | Proper Technique, Set Up, & Mistakes",
+    "tutorialVideoChannel": "Physique Development",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-single-leg-rdl",
@@ -1060,7 +1372,13 @@
     "equipment": [
       "Dumbbell"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=single-leg+rdl+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=single-leg+rdl+proper+form",
+    "imageId": "Kettlebell_One-Legged_Deadlift",
+    "imageSource": "Kettlebell One-Legged Deadlift",
+    "tutorialVideoId": "Zfr6wizR8rs",
+    "tutorialVideoTitle": "The BEST Single-Leg RDL Tutorial (Romanian Deadlift)",
+    "tutorialVideoChannel": "Squat University",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-barbell-hip-thrust",
@@ -1082,7 +1400,13 @@
       "bench",
       "pad"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=barbell+hip+thrust+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=barbell+hip+thrust+proper+form",
+    "imageId": "Barbell_Hip_Thrust",
+    "imageSource": "Barbell Hip Thrust",
+    "tutorialVideoId": "xDmFkJxPzeM",
+    "tutorialVideoTitle": "How To Build Great Glutes with Perfect Hip Thrust Technique (Fix Mistakes!)",
+    "tutorialVideoChannel": "Jeff Nippard",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-smith-hip-thrust",
@@ -1102,7 +1426,13 @@
       "Smith",
       "bench"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=smith+hip+thrust+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=smith+hip+thrust+proper+form",
+    "imageId": "Smith_Machine_Hip_Raise",
+    "imageSource": "Smith Machine Hip Raise",
+    "tutorialVideoId": "ADgWjz9i42Y",
+    "tutorialVideoTitle": "How to: Smith Machine Glute Bridge (Hip Thrust) | Grow Bigger Glutes w/ Minimal Setup",
+    "tutorialVideoChannel": "Physique Development",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-cable-glute-kickback",
@@ -1122,7 +1452,13 @@
       "Cable",
       "ankle strap"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=cable+glute+kickback+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=cable+glute+kickback+proper+form",
+    "imageId": "One-Legged_Cable_Kickback",
+    "imageSource": "One-Legged Cable Kickback",
+    "tutorialVideoId": "5jJNfIlKTmg",
+    "tutorialVideoTitle": "How to PROPERLY Cable Glute Kickback (GROW YOUR GLUTES)",
+    "tutorialVideoChannel": "Colossus Fitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-45-back-extension-glute-bias",
@@ -1142,7 +1478,13 @@
     "equipment": [
       "45° bench"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=45°+back+extension+(glute+bias)+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=45°+back+extension+(glute+bias)+proper+form",
+    "imageId": "Hyperextensions_Back_Extensions",
+    "imageSource": "Hyperextensions (Back Extensions)",
+    "tutorialVideoId": "GFqfIInCuUQ",
+    "tutorialVideoTitle": "How to Best Target your Glutes in 45 Degree Hip Extension | Form Tutorial",
+    "tutorialVideoChannel": "Physique Development",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-bulgarian-split-squat",
@@ -1164,7 +1506,13 @@
       "Bench",
       "DB optional"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=bulgarian+split+squat+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=bulgarian+split+squat+proper+form",
+    "imageId": "Split_Squat_with_Dumbbells",
+    "imageSource": "Split Squat with Dumbbells",
+    "tutorialVideoId": "2C-uNgKwPLE",
+    "tutorialVideoTitle": "How To: Bulgarian Split Squat",
+    "tutorialVideoChannel": "ScottHermanFitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-walking-lunge",
@@ -1185,7 +1533,13 @@
     "equipment": [
       "DB optional"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=walking+lunge+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=walking+lunge+proper+form",
+    "imageId": "Bodyweight_Walking_Lunge",
+    "imageSource": "Bodyweight Walking Lunge",
+    "tutorialVideoId": "Pbmj6xPo-Hw",
+    "tutorialVideoTitle": "Walking Lunges Exercise Tutorial | Build Legendary Legs & Cardio",
+    "tutorialVideoChannel": "Buff Dudes Workouts",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-reverse-lunge",
@@ -1206,7 +1560,13 @@
     "equipment": [
       "DB optional"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=reverse+lunge+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=reverse+lunge+proper+form",
+    "imageId": "Dumbbell_Rear_Lunge",
+    "imageSource": "Dumbbell Rear Lunge",
+    "tutorialVideoId": "w7pyyqLorJ4",
+    "tutorialVideoTitle": "Do Reverse Lunges Like a Pro: A Simple Step-by-Step Guide",
+    "tutorialVideoChannel": "Hinge Health",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-dumbbell-step-up",
@@ -1227,7 +1587,13 @@
       "Box/bench",
       "DB"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=dumbbell+step-up+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=dumbbell+step-up+proper+form",
+    "imageId": "Dumbbell_Step_Ups",
+    "imageSource": "Dumbbell Step Ups",
+    "tutorialVideoId": "5ksu8nrdVIE",
+    "tutorialVideoTitle": "DUMBBELL STEP UP TUTORIAL 🦵🏼 // Strengthen your legs with a pair of dumbbells and a bench!",
+    "tutorialVideoChannel": "KevTheTrainer",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-standing-calf-raise",
@@ -1246,7 +1612,13 @@
     "equipment": [
       "Standing calf machine"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=standing+calf+raise+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=standing+calf+raise+proper+form",
+    "imageId": "Standing_Calf_Raises",
+    "imageSource": "Standing Calf Raises",
+    "tutorialVideoId": "SVtg-1loH4c",
+    "tutorialVideoTitle": "How to PROPERLY Standing Calf Raise | Tips & Common Mistakes",
+    "tutorialVideoChannel": "Colossus Fitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-seated-calf-raise",
@@ -1265,7 +1637,13 @@
     "equipment": [
       "Seated calf machine"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=seated+calf+raise+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=seated+calf+raise+proper+form",
+    "imageId": "Seated_Calf_Raise",
+    "imageSource": "Seated Calf Raise",
+    "tutorialVideoId": "6O5hh1rBtx8",
+    "tutorialVideoTitle": "How to PROPERLY Calf Raise (SEATED CALF RAISE TIPS)",
+    "tutorialVideoChannel": "Colossus Fitness",
+    "tutorialVideoChecked": "2026-11-12"
   },
   {
     "id": "legs-single-leg-calf-raise",
@@ -1285,6 +1663,12 @@
       "Step",
       "DB optional"
     ],
-    "tutorialUrl": "https://www.youtube.com/results?search_query=single-leg+calf+raise+proper+form"
+    "tutorialUrl": "https://www.youtube.com/results?search_query=single-leg+calf+raise+proper+form",
+    "imageId": "Standing_Dumbbell_Calf_Raise",
+    "imageSource": "Standing Dumbbell Calf Raise",
+    "tutorialVideoId": "1_B7pkicFk8",
+    "tutorialVideoTitle": "Standing Single Leg Calf Raise: A Simple Tutorial",
+    "tutorialVideoChannel": "Davis Diley",
+    "tutorialVideoChecked": "2026-11-12"
   }
 ]

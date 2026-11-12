@@ -40,6 +40,7 @@ import {
     Bar,
 } from "recharts";
 import exercisesData from "./data/exercises.json";
+import { MuscleMap, Shots, VideoEmbed, photo } from "./media";
 import { templates, schedule } from "./data/templates";
 import {
     allSessions,
@@ -742,18 +743,31 @@ function App() {
                                     }}
                                 >
                                     <div
-                                        className={`exercise-art ${split.toLowerCase()}`}
+                                        className={`exercise-art ${split.toLowerCase()}${e.imageId ? " has-img" : ""}`}
                                     >
                                         <span>
                                             {split.toUpperCase()} /{" "}
                                             {String(i + 1).padStart(2, "0")}
                                         </span>
-                                        <Dumbbell size={31} />
-                                        <small>
-                                            {e.equipment
-                                                .slice(0, 2)
-                                                .join(" · ")}
-                                        </small>
+                                        {e.imageId ? (
+                                            <img
+                                                src={photo(e.imageId, 0)}
+                                                alt={e.name}
+                                                width={640}
+                                                height={427}
+                                                loading="lazy"
+                                                decoding="async"
+                                            />
+                                        ) : (
+                                            <>
+                                                <Dumbbell size={31} />
+                                                <small>
+                                                    {e.equipment
+                                                        .slice(0, 2)
+                                                        .join(" · ")}
+                                                </small>
+                                            </>
+                                        )}
                                     </div>
                                     <div className="exercise-card-body">
                                         <b>{e.name}</b>
@@ -790,14 +804,36 @@ function App() {
                         </button>
                         <div className="detail-layout">
                             <div>
-                                <div
-                                    className={`detail-art ${selected.split.toLowerCase()}`}
-                                >
-                                    <Dumbbell size={64} />
-                                    <span>
-                                        {selected.split.toUpperCase()} MOVEMENT
-                                    </span>
-                                </div>
+                                {selected.tutorialVideoId ? (
+                                    <div className="panel detail-video">
+                                        <VideoEmbed
+                                            id={selected.tutorialVideoId}
+                                            title={selected.tutorialVideoTitle}
+                                            channel={
+                                                selected.tutorialVideoChannel
+                                            }
+                                        />
+                                        <a
+                                            className="youtube-link"
+                                            href={selected.tutorialUrl}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            Search more on YouTube{" "}
+                                            <ChevronRight size={16} />
+                                        </a>
+                                    </div>
+                                ) : (
+                                    <div
+                                        className={`detail-art ${selected.split.toLowerCase()}`}
+                                    >
+                                        <Dumbbell size={64} />
+                                        <span>
+                                            {selected.split.toUpperCase()}{" "}
+                                            MOVEMENT
+                                        </span>
+                                    </div>
+                                )}
                                 <div className="panel detail-tech">
                                     <div className="eyebrow">
                                         TECHNIQUE GUIDANCE
@@ -854,7 +890,12 @@ function App() {
                                     </div>
                                 </div>
                                 <div className="detail-section">
-                                    <h3>Primary muscles</h3>
+                                    <h3>Primary & secondary muscles</h3>
+                                    <MuscleMap
+                                        primary={selected.primaryMuscles}
+                                        secondary={selected.secondaryMuscles}
+                                    />
+                                    <h3 className="legend primary">Primary</h3>
                                     <div className="tag-list">
                                         {selected.primaryMuscles.map(
                                             (m: string) => (
@@ -867,24 +908,43 @@ function App() {
                                             ),
                                         )}
                                     </div>
-                                </div>
-                                <div className="detail-section">
-                                    <h3>Secondary muscles</h3>
-                                    <div className="tag-list">
-                                        {selected.secondaryMuscles.map(
-                                            (m: string) => (
-                                                <span
-                                                    className="muscle-tag"
-                                                    key={m}
-                                                >
-                                                    {m}
-                                                </span>
-                                            ),
-                                        )}
-                                    </div>
+                                    {selected.secondaryMuscles.length > 0 && (
+                                        <>
+                                            <h3 className="legend">
+                                                Secondary
+                                            </h3>
+                                            <div className="tag-list">
+                                                {selected.secondaryMuscles.map(
+                                                    (m: string) => (
+                                                        <span
+                                                            className="muscle-tag"
+                                                            key={m}
+                                                        >
+                                                            {m}
+                                                        </span>
+                                                    ),
+                                                )}
+                                            </div>
+                                        </>
+                                    )}
                                 </div>
                                 <div className="detail-section">
                                     <h3>Equipment & setup</h3>
+                                    {selected.imageId && (
+                                        <>
+                                            <Shots
+                                                id={selected.imageId}
+                                                name={selected.name}
+                                            />
+                                            <p className="subtle shots-credit">
+                                                Foto referensi:{" "}
+                                                {selected.imageSource} ·
+                                                free-exercise-db (domain
+                                                publik). Alat di gym Anda bisa
+                                                sedikit berbeda.
+                                            </p>
+                                        </>
+                                    )}
                                     <ul>
                                         {selected.equipment.map((x: string) => (
                                             <li key={x}>{x}</li>
@@ -910,15 +970,17 @@ function App() {
                                         atas dengan teknik baik.
                                     </p>
                                 </div>
-                                <a
-                                    className="youtube-link"
-                                    href={selected.tutorialUrl}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    Search tutorial on YouTube{" "}
-                                    <ChevronRight size={16} />
-                                </a>
+                                {!selected.tutorialVideoId && (
+                                    <a
+                                        className="youtube-link"
+                                        href={selected.tutorialUrl}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        Search more on YouTube{" "}
+                                        <ChevronRight size={16} />
+                                    </a>
+                                )}
                             </div>
                         </div>
                     </section>
