@@ -51,3 +51,11 @@
 /* sticky left panel */
 .detail-left{position:sticky;top:88px;align-self:start}
 @media(max-width:700px){.detail-left{position:static}}
+/* muscle map hover: enlarged, trained muscles pump + blood-flow dashes */
+.detail-section .muscle-map{cursor:zoom-in}
+.muscle-map.muscle-map-zoom{width:min(600px,86vw);max-width:none;gap:48px;margin:0}
+.muscle-map-zoom polygon[style*="--accent"],.muscle-map-zoom polygon[style*="--orange"]{stroke:#ff3b4f;stroke-width:2px;vector-effect:non-scaling-stroke;stroke-dasharray:4 7;stroke-linecap:round;transform-box:fill-box;transform-origin:center;animation:blood-flow .8s linear infinite,muscle-pump 1.3s ease-in-out infinite}
+.muscle-map-zoom polygon[style*="--orange"]{animation-delay:0s,.35s}
+@keyframes blood-flow{to{stroke-dashoffset:-22}}
+@keyframes muscle-pump{50%{transform:scale(1.045);filter:brightness(1.3) drop-shadow(0 0 5px #ff3b4f)}}
+@media(prefers-reduced-motion:reduce){.muscle-map-zoom polygon{animation:none!important}}

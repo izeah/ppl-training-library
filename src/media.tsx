@@ -45,6 +45,7 @@ export function MuscleMap({
     primary: string[];
     secondary: string[];
 }) {
+    const [zoom, setZoom] = useState(false);
     const p = slugs(primary);
     const s = slugs(secondary).filter((m) => !p.includes(m));
     const data = [
@@ -52,19 +53,35 @@ export function MuscleMap({
         { name: "primary", muscles: p },
         { name: "secondary", muscles: s },
     ];
+    const bodies = (["anterior", "posterior"] as const).map((type) => (
+        <Model
+            key={type}
+            type={type}
+            data={data}
+            bodyColor="var(--border)"
+            highlightedColors={["var(--orange)", "var(--accent)"]}
+            style={{ width: "100%" }}
+        />
+    ));
     return (
-        <div className="muscle-map" role="img" aria-label="Diagram otot target">
-            {(["anterior", "posterior"] as const).map((type) => (
-                <Model
-                    key={type}
-                    type={type}
-                    data={data}
-                    bodyColor="var(--border)"
-                    highlightedColors={["var(--orange)", "var(--accent)"]}
-                    style={{ width: "100%" }}
-                />
-            ))}
-        </div>
+        <>
+            <div
+                className="muscle-map"
+                role="img"
+                aria-label="Diagram otot target"
+                onMouseEnter={() => setZoom(true)}
+                onMouseLeave={() => setZoom(false)}
+            >
+                {bodies}
+            </div>
+            {/* Hover: enlarged map, trained muscles animated (CSS). Overlay is
+                pointer-events:none so the hover stays on the small map. */}
+            {zoom && (
+                <div className="zoom-overlay" aria-hidden="true">
+                    <div className="muscle-map muscle-map-zoom">{bodies}</div>
+                </div>
+            )}
+        </>
     );
 }
 
