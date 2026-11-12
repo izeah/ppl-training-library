@@ -21,7 +21,7 @@ npm run preview
 The production site is generated in `dist/`.
 
 ## Deployment
-Deploy the contents of `dist/` to any static host (Netlify, Vercel, Cloudflare Pages, or GitHub Pages). For GitHub Pages under a repository subpath, configure Vite's `base` in `vite.config.ts` to the repository path before building. Configure the host to serve `index.html` for application routes if routes are added later.
+Deploy the contents of `dist/` to any static host (Netlify, Vercel, Cloudflare Pages, or GitHub Pages). Each page has its own URL (`/dashboard`, `/library`, `/library/<exercise-id>`, `/planner`, `/history`, `/progress`, `/settings`, `/workout`), so the host must serve `index.html` for any path that is not a file (SPA fallback), otherwise reloading a page returns 404. `vite dev` and `vite preview` already do this. Vite's `base` is `/`; for GitHub Pages under a repository subpath, set it to `/<repo>/` before building.
 
 ## Data persistence and backup
 Workout sessions, body-weight entries, profile preferences, and custom templates are stored in browser IndexedDB. Data remains on the same browser/device after closing the browser, but it is not synchronized to other devices and can be lost if site data is cleared. Use **Settings → Export data backup** regularly. Import accepts this app's JSON backup schema version 1.

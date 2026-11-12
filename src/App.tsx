@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
     Activity,
     ArrowLeft,
@@ -7,15 +7,19 @@ import {
     BarChart3,
     CalendarDays,
     Check,
+    ChevronLeft,
     ChevronRight,
     Clock,
     Dumbbell,
     Download,
+    ExternalLink,
     FileUp,
     Filter,
     Flame,
     Home,
+    LayoutGrid,
     Library,
+    List,
     Moon,
     Play,
     Plus,
@@ -64,19 +68,61 @@ type Page =
     | "settings"
     | "logger"
     | "detail";
+const TITLES: Record<Page, string> = {
+    home: "Dashboard",
+    library: "Exercise Library",
+    planner: "Workout Planner",
+    history: "Workout History",
+    analytics: "Progress Analytics",
+    settings: "Settings",
+    logger: "Active Workout",
+    detail: "Exercise Detail",
+};
+// Each page has its own URL; detail is /library/<exercise id>.
+const PATHS: Record<Page, string> = {
+    home: "dashboard",
+    library: "library",
+    planner: "planner",
+    history: "history",
+    analytics: "progress",
+    settings: "settings",
+    logger: "workout",
+    detail: "library",
+};
+const BASE = import.meta.env.BASE_URL;
+const fromPath = (): { page: Page; ex: any } => {
+    const [seg, id] = location.pathname.slice(BASE.length).split("/");
+    const ex = seg === "library" && id && exercises.find((e) => e.id === id);
+    if (ex) return { page: "detail", ex };
+    const page = (Object.keys(PATHS) as Page[]).find(
+        (p) => p !== "detail" && PATHS[p] === seg,
+    );
+    return { page: page ?? "home", ex: null }; // "/" and unknown paths -> dashboard
+};
+const initialRoute = fromPath();
 const today = () => {
     const d = new Date();
     return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 };
 const uid = () => crypto.randomUUID();
 function App() {
-    const [page, setPage] = useState<Page>("home"),
+    const [page, setPage] = useState<Page>(initialRoute.page),
         [sessions, setSessions] = useState<Session[]>([]),
         [measurements, setMeasurements] = useState<any[]>([]),
         [active, setActive] = useState<Session | null>(null),
-        [selected, setSelected] = useState<any>(null),
+        [selected, setSelected] = useState<any>(initialRoute.ex),
+        [ready, setReady] = useState(false),
         [detailReturn, setDetailReturn] = useState<Page>("library"),
-        [split, setSplit] = useState("Push"),
+        [split, setSplit] = useState("All"),
+        [view, setView] = useState<"grid" | "list">(() => {
+            try {
+                return localStorage.getItem("libraryView") === "list"
+                    ? "list"
+                    : "grid";
+            } catch {
+                return "grid";
+            }
+        }),
         [query, setQuery] = useState(""),
         [muscle, setMuscle] = useState("All"),
         [equipment, setEquipment] = useState("All"),
@@ -90,7 +136,9 @@ function App() {
         [notice, setNotice] = useState(""),
         [elapsed, setElapsed] = useState(0),
         [rest, setRest] = useState(0),
-        [customTemplates, setCustomTemplates] = useState<any[]>([]);
+        [customTemplates, setCustomTemplates] = useState<any[]>([]),
+        [peekExercise, setPeekExercise] = useState<any>(null),
+        [sidebarOpen, setSidebarOpen] = useState(true);
     const refresh = async () => {
         const rows = await allSessions();
         setSessions(rows.sort((a, b) => b.date.localeCompare(a.date)));
@@ -108,7 +156,7 @@ function App() {
         }
     };
     useEffect(() => {
-        refresh();
+        refresh().then(() => setReady(true));
         getSetting("dark", true).then(setDark);
         getSetting("profile", {
             name: "",
@@ -145,6 +193,47 @@ function App() {
         const t = setInterval(() => setRest((v) => Math.max(0, v - 1)), 1000);
         return () => clearInterval(t);
     }, [rest > 0]);
+    useEffect(() => {
+        try {
+            localStorage.setItem("libraryView", view);
+        } catch {}
+    }, [view]);
+    // Peek: opens on hovering a card photo. While open the backdrop takes the pointer,
+    // so nothing underneath is clickable; only the popup's hint button is.
+    const peekPhoto = useRef<DOMRect | null>(null),
+        peekBox = useRef<HTMLDivElement>(null);
+    const closePeek = () => setPeekExercise(null);
+    const openPeek = (e: any, photoEl: HTMLElement) => {
+        if (!matchMedia("(hover: hover)").matches) return; // touch: tap goes straight to detail
+        peekPhoto.current = photoEl.getBoundingClientRect();
+        setPeekExercise(e);
+    };
+    // Safe zone = box spanning the photo and the popup, so the cursor can always
+    // travel from one to the other; leaving it closes the popup instantly.
+    const onPeekMove = (ev: React.MouseEvent) => {
+        const a = peekPhoto.current,
+            b = peekBox.current?.getBoundingClientRect();
+        if (
+            !a ||
+            !b ||
+            ev.clientX < Math.min(a.left, b.left) ||
+            ev.clientX > Math.max(a.right, b.right) ||
+            ev.clientY < Math.min(a.top, b.top) ||
+            ev.clientY > Math.max(a.bottom, b.bottom)
+        )
+            closePeek();
+    };
+    const openDetail = (e: any) => {
+        closePeek();
+        setSelected(e);
+        setDetailReturn("library");
+        setPage("detail");
+    };
+    useEffect(() => {
+        const h = (e: KeyboardEvent) => { if (e.key === "Escape") setPeekExercise(null); };
+        document.addEventListener("keydown", h);
+        return () => document.removeEventListener("keydown", h);
+    }, []);
     const completed = sessions.filter((s) => s.finishedAt);
     const weekStart = new Date();
     weekStart.setDate(weekStart.getDate() - ((weekStart.getDay() + 6) % 7));
@@ -166,11 +255,12 @@ function App() {
             ),
         0,
     );
+    const inSplit = (e: any) => split === "All" || e.split === split;
     const filtered = useMemo(
         () =>
             exercises.filter(
                 (e) =>
-                    e.split === split &&
+                    inSplit(e) &&
                     `${e.name} ${e.primaryMuscles.join(" ")} ${e.equipment.join(" ")}`
                         .toLowerCase()
                         .includes(query.toLowerCase()) &&
@@ -256,7 +346,7 @@ function App() {
             ),
         }));
     const nav = [
-        { id: "home", label: "Home", icon: Home },
+        { id: "home", label: "Dashboard", icon: Home },
         { id: "library", label: "Library", icon: Library },
         { id: "planner", label: "Planner", icon: CalendarDays },
         { id: "history", label: "History", icon: Activity },
@@ -350,73 +440,131 @@ function App() {
         setMeasurements(await allMeasurements());
         setNotice("Berat badan dicatat.");
     };
-    const title =
-        page === "home"
-            ? "Dashboard"
-            : page === "library"
-              ? "Exercise Library"
-              : page === "planner"
-                ? "Workout Planner"
-                : page === "history"
-                  ? "Workout History"
-                  : page === "analytics"
-                    ? "Progress Analytics"
-                    : page === "settings"
-                      ? "Settings"
-                      : page === "logger"
-                        ? "Active Workout"
-                        : "Exercise Detail";
+    // Last crumb = current page (not clickable). Detail shows where it was opened from.
+    const crumbs: { label: string; go?: () => void }[] = [
+        { label: "Workspace", go: () => setPage("home") },
+        ...(page === "detail" && selected
+            ? [
+                  {
+                      label: TITLES[detailReturn],
+                      go: () => setPage(detailReturn),
+                  },
+                  { label: selected.name },
+              ]
+            : [{ label: TITLES[page] }]),
+    ];
+    // URL sync. First run and redirects replace the history entry ("/" -> "/dashboard",
+    // stale /workout -> /dashboard) so Back never lands on a page that bounces again.
+    const replaceUrl = useRef(true);
+    useEffect(() => {
+        const path =
+            BASE +
+            (page === "detail" && selected
+                ? `library/${selected.id}`
+                : PATHS[page]);
+        if (location.pathname !== path)
+            history[replaceUrl.current ? "replaceState" : "pushState"](
+                null,
+                "",
+                path,
+            );
+        replaceUrl.current = false;
+        document.title = `${crumbs[crumbs.length - 1].label} · PPL Training Library`;
+    }, [page, selected]);
+    useEffect(() => {
+        const onPop = () => {
+            const r = fromPath();
+            if (r.ex) setSelected(r.ex);
+            setPage(r.page);
+            closePeek();
+        };
+        addEventListener("popstate", onPop);
+        return () => removeEventListener("popstate", onPop);
+    }, []);
+    // /workout without a running session (reload after finishing, Back button) -> dashboard
+    useEffect(() => {
+        if (ready && page === "logger" && !active) {
+            replaceUrl.current = true;
+            setPage("home");
+        }
+    }, [ready, page, active]);
     return (
         <div className="app-shell">
-            <aside className="sidebar">
+            <aside className={`sidebar${sidebarOpen ? "" : " sidebar-hidden"}`}>
                 <div className="brand">
-                    <div className="brand-mark">
-                        <Dumbbell size={21} />
-                    </div>
-                    <div>
-                        <b>
-                            PPL <span>LIBRARY</span>
-                        </b>
-                        <small>TRAIN WITH INTENT</small>
-                    </div>
+                    {sidebarOpen ? (
+                        <div className="brand-mark">
+                            <Dumbbell size={21} />
+                        </div>
+                    ) : (
+                        <button
+                            className="brand-mark brand-mark-collapsed"
+                            onClick={() => setSidebarOpen(true)}
+                            aria-label="Tampilkan sidebar"
+                            title="Tampilkan sidebar"
+                        >
+                            <Dumbbell size={21} />
+                            <ChevronRight size={21} />
+                        </button>
+                    )}
+                    {sidebarOpen && (
+                        <>
+                            <div>
+                                <b>PPL <span>LIBRARY</span></b>
+                                <small>TRAIN WITH INTENT</small>
+                            </div>
+                            <button
+                                className="sidebar-toggle-btn"
+                                onClick={() => setSidebarOpen(false)}
+                                title="Sembunyikan sidebar"
+                            >
+                                <ChevronLeft size={16} />
+                            </button>
+                        </>
+                    )}
                 </div>
-                <div className="side-label">WORKSPACE</div>
+                {sidebarOpen && <div className="side-label">WORKSPACE</div>}
                 {nav.map((n) => (
                     <button
                         key={n.id}
                         className={`nav-item ${page === n.id ? "active" : ""}`}
                         onClick={() => setPage(n.id as Page)}
+                        title={sidebarOpen ? undefined : n.label}
                     >
                         <n.icon size={18} />
-                        {n.label}
+                        {sidebarOpen && <span>{n.label}</span>}
                     </button>
                 ))}
                 <div className="side-bottom">
                     <button
                         className={`nav-item ${page === "settings" ? "active" : ""}`}
                         onClick={() => setPage("settings")}
+                        title={sidebarOpen ? undefined : "Settings"}
                     >
                         <Settings size={18} />
-                        Settings
+                        {sidebarOpen && <span>Settings</span>}
                     </button>
-                    <div className="local-status">
-                        <span className="live-dot" /> Data tersimpan di
-                        perangkat
-                    </div>
                 </div>
             </aside>
-            <main className="main">
+            <main className={`main${sidebarOpen ? "" : " sidebar-collapsed"}`}>
                 <header className="topbar">
                     <div className="mobile-brand">
                         <Dumbbell size={19} /> PPL LIBRARY
                     </div>
-                    <div className="crumb">
-                        WORKSPACE <span>/</span> {title.toUpperCase()}
-                    </div>
+                    <nav className="crumb" aria-label="Breadcrumb">
+                        {crumbs.map((c) =>
+                            c.go ? (
+                                <button key={c.label} onClick={c.go}>
+                                    {c.label}
+                                </button>
+                            ) : (
+                                <b key={c.label} aria-current="page">
+                                    {c.label}
+                                </b>
+                            ),
+                        )}
+                    </nav>
                     <div className="top-actions">
-                        <span className="local-pill">
-                            <span className="live-dot" /> LOCAL STORAGE
-                        </span>
                         <button
                             className="icon-btn"
                             aria-label="Toggle theme"
@@ -658,7 +806,7 @@ function App() {
                             </div>
                         </div>
                         <div className="split-tabs">
-                            {["Push", "Pull", "Legs"].map((s) => (
+                            {["All", "Push", "Pull", "Legs"].map((s) => (
                                 <button
                                     key={s}
                                     className={split === s ? "selected" : ""}
@@ -672,7 +820,9 @@ function App() {
                                     <span>
                                         {
                                             exercises.filter(
-                                                (e) => e.split === s,
+                                                (e) =>
+                                                    s === "All" ||
+                                                    e.split === s,
                                             ).length
                                         }
                                     </span>
@@ -687,7 +837,6 @@ function App() {
                                     onChange={(e) => setQuery(e.target.value)}
                                     placeholder="Search exercise or muscle..."
                                 />
-                                <kbd>⌕</kbd>
                             </div>
                             <select
                                 value={muscle}
@@ -697,7 +846,7 @@ function App() {
                                 {Array.from(
                                     new Set(
                                         exercises
-                                            .filter((e) => e.split === split)
+                                            .filter(inSplit)
                                             .flatMap((e) => e.primaryMuscles),
                                     ),
                                 )
@@ -714,7 +863,7 @@ function App() {
                                 {Array.from(
                                     new Set(
                                         exercises
-                                            .filter((e) => e.split === split)
+                                            .filter(inSplit)
                                             .flatMap((e) => e.equipment),
                                     ),
                                 )
@@ -729,24 +878,45 @@ function App() {
                             <span>
                                 <Filter size={13} /> FILTERED BY{" "}
                                 {split.toUpperCase()}
+                                <span
+                                    className="view-toggle"
+                                    role="group"
+                                    aria-label="Mode tampilan"
+                                >
+                                    <button
+                                        aria-pressed={view === "grid"}
+                                        aria-label="Grid"
+                                        title="Grid"
+                                        onClick={() => setView("grid")}
+                                    >
+                                        <LayoutGrid size={14} />
+                                    </button>
+                                    <button
+                                        aria-pressed={view === "list"}
+                                        aria-label="List"
+                                        title="List"
+                                        onClick={() => setView("list")}
+                                    >
+                                        <List size={14} />
+                                    </button>
+                                </span>
                             </span>
                         </div>
-                        <div className="exercise-grid">
+                        <div className={`exercise-grid ${view}`}>
                             {filtered.map((e, i) => (
                                 <button
                                     className="exercise-card"
                                     key={e.id}
-                                    onClick={() => {
-                                        setSelected(e);
-                                        setDetailReturn("library");
-                                        setPage("detail");
-                                    }}
+                                    onClick={() => openDetail(e)}
                                 >
                                     <div
-                                        className={`exercise-art ${split.toLowerCase()}${e.imageId ? " has-img" : ""}`}
+                                        className={`exercise-art ${e.split.toLowerCase()}${e.imageId ? " has-img" : ""}`}
+                                        onMouseEnter={(ev) =>
+                                            openPeek(e, ev.currentTarget)
+                                        }
                                     >
                                         <span>
-                                            {split.toUpperCase()} /{" "}
+                                            {e.split.toUpperCase()} /{" "}
                                             {String(i + 1).padStart(2, "0")}
                                         </span>
                                         {e.imageId ? (
@@ -803,7 +973,7 @@ function App() {
                             <ArrowLeft size={16} /> Back
                         </button>
                         <div className="detail-layout">
-                            <div>
+                            <div className="detail-left">
                                 {selected.tutorialVideoId ? (
                                     <div className="panel detail-video">
                                         <VideoEmbed
@@ -819,8 +989,15 @@ function App() {
                                             target="_blank"
                                             rel="noreferrer"
                                         >
-                                            Search more on YouTube{" "}
-                                            <ChevronRight size={16} />
+                                            <span>
+                                                Search more on{" "}
+                                                <img
+                                                    src={`${import.meta.env.BASE_URL}youtube.png`}
+                                                    alt="YouTube"
+                                                    className="yt-logo"
+                                                />
+                                            </span>
+                                            <ExternalLink size={15} />
                                         </a>
                                     </div>
                                 ) : (
@@ -977,8 +1154,15 @@ function App() {
                                         target="_blank"
                                         rel="noreferrer"
                                     >
-                                        Search more on YouTube{" "}
-                                        <ChevronRight size={16} />
+                                        <span>
+                                                Search more on{" "}
+                                                <img
+                                                    src={`${import.meta.env.BASE_URL}youtube.png`}
+                                                    alt="YouTube"
+                                                    className="yt-logo"
+                                                />
+                                            </span>
+                                            <ExternalLink size={15} />
                                     </a>
                                 )}
                             </div>
@@ -2088,8 +2272,8 @@ function App() {
                     </section>
                 )}
                 <footer className="footer">
-                    PPL TRAINING LIBRARY <span>·</span> LOCAL-FIRST TRAINING
-                    JOURNAL
+                    PPL TRAINING LIBRARY <span>·</span> LOCAL-STORAGE-FIRST
+                    TRAINING JOURNAL <span>·</span> DATA TERSIMPAN DI PERANGKAT
                 </footer>
             </main>
             <nav className="bottom-nav">
@@ -2115,6 +2299,67 @@ function App() {
                 <div className="toast">
                     <Check size={16} />
                     {notice}
+                </div>
+            )}
+            {peekExercise && (
+                <div
+                    className="peek-overlay"
+                    onMouseMove={onPeekMove}
+                    onMouseLeave={closePeek}
+                    onWheel={closePeek}
+                >
+                    <div className="peek-modal" ref={peekBox}>
+                        {peekExercise.imageId && (
+                            <img
+                                src={photo(peekExercise.imageId, 0)}
+                                alt={peekExercise.name}
+                                className="peek-photo"
+                            />
+                        )}
+                        <div className="peek-content">
+                            <div className="eyebrow">
+                                {peekExercise.split.toUpperCase()} · PREVIEW
+                            </div>
+                            <h2 className="peek-name">{peekExercise.name}</h2>
+                            <MuscleMap
+                                primary={peekExercise.primaryMuscles}
+                                secondary={peekExercise.secondaryMuscles}
+                            />
+                            <div className="peek-stats">
+                                <div>
+                                    <small>SETS</small>
+                                    <b>{peekExercise.sets}</b>
+                                </div>
+                                <div>
+                                    <small>REPS</small>
+                                    <b>{peekExercise.reps}</b>
+                                </div>
+                                <div>
+                                    <small>REST</small>
+                                    <b>{peekExercise.rest}</b>
+                                </div>
+                            </div>
+                            <div className="tag-list" style={{ marginTop: 10 }}>
+                                {peekExercise.primaryMuscles.map((m: string) => (
+                                    <span key={m} className="muscle-tag primary">{m}</span>
+                                ))}
+                                {peekExercise.secondaryMuscles.map((m: string) => (
+                                    <span key={m} className="muscle-tag">{m}</span>
+                                ))}
+                            </div>
+                            {peekExercise.equipment.length > 0 && (
+                                <p className="peek-equip">
+                                    {peekExercise.equipment.join(" · ")}
+                                </p>
+                            )}
+                            <button
+                                className="peek-hint"
+                                onClick={() => openDetail(peekExercise)}
+                            >
+                                Klik untuk detail lengkap →
+                            </button>
+                        </div>
+                    </div>
                 </div>
             )}
         </div>
