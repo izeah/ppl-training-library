@@ -78,17 +78,40 @@ const TITLES: Record<Page, string> = {
     logger: "Active Workout",
     detail: "Exercise Detail",
 };
+// Each page has its own URL; detail is /library/<exercise id>.
+const PATHS: Record<Page, string> = {
+    home: "dashboard",
+    library: "library",
+    planner: "planner",
+    history: "history",
+    analytics: "progress",
+    settings: "settings",
+    logger: "workout",
+    detail: "library",
+};
+const BASE = import.meta.env.BASE_URL;
+const fromPath = (): { page: Page; ex: any } => {
+    const [seg, id] = location.pathname.slice(BASE.length).split("/");
+    const ex = seg === "library" && id && exercises.find((e) => e.id === id);
+    if (ex) return { page: "detail", ex };
+    const page = (Object.keys(PATHS) as Page[]).find(
+        (p) => p !== "detail" && PATHS[p] === seg,
+    );
+    return { page: page ?? "home", ex: null }; // "/" and unknown paths -> dashboard
+};
+const initialRoute = fromPath();
 const today = () => {
     const d = new Date();
     return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 };
 const uid = () => crypto.randomUUID();
 function App() {
-    const [page, setPage] = useState<Page>("home"),
+    const [page, setPage] = useState<Page>(initialRoute.page),
         [sessions, setSessions] = useState<Session[]>([]),
         [measurements, setMeasurements] = useState<any[]>([]),
         [active, setActive] = useState<Session | null>(null),
-        [selected, setSelected] = useState<any>(null),
+        [selected, setSelected] = useState<any>(initialRoute.ex),
+        [ready, setReady] = useState(false),
         [detailReturn, setDetailReturn] = useState<Page>("library"),
         [split, setSplit] = useState("All"),
         [view, setView] = useState<"grid" | "list">(() => {
@@ -133,7 +156,7 @@ function App() {
         }
     };
     useEffect(() => {
-        refresh();
+        refresh().then(() => setReady(true));
         getSetting("dark", true).then(setDark);
         getSetting("profile", {
             name: "",
@@ -323,7 +346,7 @@ function App() {
             ),
         }));
     const nav = [
-        { id: "home", label: "Home", icon: Home },
+        { id: "home", label: "Dashboard", icon: Home },
         { id: "library", label: "Library", icon: Library },
         { id: "planner", label: "Planner", icon: CalendarDays },
         { id: "history", label: "History", icon: Activity },
@@ -430,6 +453,41 @@ function App() {
               ]
             : [{ label: TITLES[page] }]),
     ];
+    // URL sync. First run and redirects replace the history entry ("/" -> "/dashboard",
+    // stale /workout -> /dashboard) so Back never lands on a page that bounces again.
+    const replaceUrl = useRef(true);
+    useEffect(() => {
+        const path =
+            BASE +
+            (page === "detail" && selected
+                ? `library/${selected.id}`
+                : PATHS[page]);
+        if (location.pathname !== path)
+            history[replaceUrl.current ? "replaceState" : "pushState"](
+                null,
+                "",
+                path,
+            );
+        replaceUrl.current = false;
+        document.title = `${crumbs[crumbs.length - 1].label} · PPL Training Library`;
+    }, [page, selected]);
+    useEffect(() => {
+        const onPop = () => {
+            const r = fromPath();
+            if (r.ex) setSelected(r.ex);
+            setPage(r.page);
+            closePeek();
+        };
+        addEventListener("popstate", onPop);
+        return () => removeEventListener("popstate", onPop);
+    }, []);
+    // /workout without a running session (reload after finishing, Back button) -> dashboard
+    useEffect(() => {
+        if (ready && page === "logger" && !active) {
+            replaceUrl.current = true;
+            setPage("home");
+        }
+    }, [ready, page, active]);
     return (
         <div className="app-shell">
             <aside className={`sidebar${sidebarOpen ? "" : " sidebar-hidden"}`}>
