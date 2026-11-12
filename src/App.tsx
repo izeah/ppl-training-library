@@ -544,12 +544,6 @@ function App() {
                         <Settings size={18} />
                         {sidebarOpen && <span>Settings</span>}
                     </button>
-                    {sidebarOpen && (
-                        <div className="local-status">
-                            <span className="live-dot" /> Data tersimpan di
-                            perangkat
-                        </div>
-                    )}
                 </div>
             </aside>
             <main className={`main${sidebarOpen ? "" : " sidebar-collapsed"}`}>
@@ -571,9 +565,6 @@ function App() {
                         )}
                     </nav>
                     <div className="top-actions">
-                        <span className="local-pill">
-                            <span className="live-dot" /> LOCAL STORAGE
-                        </span>
                         <button
                             className="icon-btn"
                             aria-label="Toggle theme"
@@ -2281,8 +2272,8 @@ function App() {
                     </section>
                 )}
                 <footer className="footer">
-                    PPL TRAINING LIBRARY <span>·</span> LOCAL-FIRST TRAINING
-                    JOURNAL
+                    PPL TRAINING LIBRARY <span>·</span> LOCAL-STORAGE-FIRST
+                    TRAINING JOURNAL <span>·</span> DATA TERSIMPAN DI PERANGKAT
                 </footer>
             </main>
             <nav className="bottom-nav">
