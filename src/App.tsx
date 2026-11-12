@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
     Activity,
     ArrowLeft,
@@ -102,7 +102,8 @@ function App() {
         [notice, setNotice] = useState(""),
         [elapsed, setElapsed] = useState(0),
         [rest, setRest] = useState(0),
-        [customTemplates, setCustomTemplates] = useState<any[]>([]);
+        [customTemplates, setCustomTemplates] = useState<any[]>([]),
+        [peekExercise, setPeekExercise] = useState<any>(null);
     const refresh = async () => {
         const rows = await allSessions();
         setSessions(rows.sort((a, b) => b.date.localeCompare(a.date)));
@@ -162,6 +163,42 @@ function App() {
             localStorage.setItem("libraryView", view);
         } catch {}
     }, [view]);
+    // Peek: opens on hovering a card photo. While open the backdrop takes the pointer,
+    // so nothing underneath is clickable; only the popup's hint button is.
+    const peekPhoto = useRef<DOMRect | null>(null),
+        peekBox = useRef<HTMLDivElement>(null);
+    const closePeek = () => setPeekExercise(null);
+    const openPeek = (e: any, photoEl: HTMLElement) => {
+        if (!matchMedia("(hover: hover)").matches) return; // touch: tap goes straight to detail
+        peekPhoto.current = photoEl.getBoundingClientRect();
+        setPeekExercise(e);
+    };
+    // Safe zone = box spanning the photo and the popup, so the cursor can always
+    // travel from one to the other; leaving it closes the popup instantly.
+    const onPeekMove = (ev: React.MouseEvent) => {
+        const a = peekPhoto.current,
+            b = peekBox.current?.getBoundingClientRect();
+        if (
+            !a ||
+            !b ||
+            ev.clientX < Math.min(a.left, b.left) ||
+            ev.clientX > Math.max(a.right, b.right) ||
+            ev.clientY < Math.min(a.top, b.top) ||
+            ev.clientY > Math.max(a.bottom, b.bottom)
+        )
+            closePeek();
+    };
+    const openDetail = (e: any) => {
+        closePeek();
+        setSelected(e);
+        setDetailReturn("library");
+        setPage("detail");
+    };
+    useEffect(() => {
+        const h = (e: KeyboardEvent) => { if (e.key === "Escape") setPeekExercise(null); };
+        document.addEventListener("keydown", h);
+        return () => document.removeEventListener("keydown", h);
+    }, []);
     const completed = sessions.filter((s) => s.finishedAt);
     const weekStart = new Date();
     weekStart.setDate(weekStart.getDate() - ((weekStart.getDay() + 6) % 7));
@@ -777,14 +814,13 @@ function App() {
                                 <button
                                     className="exercise-card"
                                     key={e.id}
-                                    onClick={() => {
-                                        setSelected(e);
-                                        setDetailReturn("library");
-                                        setPage("detail");
-                                    }}
+                                    onClick={() => openDetail(e)}
                                 >
                                     <div
                                         className={`exercise-art ${e.split.toLowerCase()}${e.imageId ? " has-img" : ""}`}
+                                        onMouseEnter={(ev) =>
+                                            openPeek(e, ev.currentTarget)
+                                        }
                                     >
                                         <span>
                                             {e.split.toUpperCase()} /{" "}
@@ -2170,6 +2206,67 @@ function App() {
                 <div className="toast">
                     <Check size={16} />
                     {notice}
+                </div>
+            )}
+            {peekExercise && (
+                <div
+                    className="peek-overlay"
+                    onMouseMove={onPeekMove}
+                    onMouseLeave={closePeek}
+                    onWheel={closePeek}
+                >
+                    <div className="peek-modal" ref={peekBox}>
+                        {peekExercise.imageId && (
+                            <img
+                                src={photo(peekExercise.imageId, 0)}
+                                alt={peekExercise.name}
+                                className="peek-photo"
+                            />
+                        )}
+                        <div className="peek-content">
+                            <div className="eyebrow">
+                                {peekExercise.split.toUpperCase()} · PREVIEW
+                            </div>
+                            <h2 className="peek-name">{peekExercise.name}</h2>
+                            <MuscleMap
+                                primary={peekExercise.primaryMuscles}
+                                secondary={peekExercise.secondaryMuscles}
+                            />
+                            <div className="peek-stats">
+                                <div>
+                                    <small>SETS</small>
+                                    <b>{peekExercise.sets}</b>
+                                </div>
+                                <div>
+                                    <small>REPS</small>
+                                    <b>{peekExercise.reps}</b>
+                                </div>
+                                <div>
+                                    <small>REST</small>
+                                    <b>{peekExercise.rest}</b>
+                                </div>
+                            </div>
+                            <div className="tag-list" style={{ marginTop: 10 }}>
+                                {peekExercise.primaryMuscles.map((m: string) => (
+                                    <span key={m} className="muscle-tag primary">{m}</span>
+                                ))}
+                                {peekExercise.secondaryMuscles.map((m: string) => (
+                                    <span key={m} className="muscle-tag">{m}</span>
+                                ))}
+                            </div>
+                            {peekExercise.equipment.length > 0 && (
+                                <p className="peek-equip">
+                                    {peekExercise.equipment.join(" · ")}
+                                </p>
+                            )}
+                            <button
+                                className="peek-hint"
+                                onClick={() => openDetail(peekExercise)}
+                            >
+                                Klik untuk detail lengkap →
+                            </button>
+                        </div>
+                    </div>
                 </div>
             )}
         </div>
