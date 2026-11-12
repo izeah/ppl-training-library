@@ -16,7 +16,9 @@ import {
     Filter,
     Flame,
     Home,
+    LayoutGrid,
     Library,
+    List,
     Moon,
     Play,
     Plus,
@@ -77,7 +79,16 @@ function App() {
         [active, setActive] = useState<Session | null>(null),
         [selected, setSelected] = useState<any>(null),
         [detailReturn, setDetailReturn] = useState<Page>("library"),
-        [split, setSplit] = useState("Push"),
+        [split, setSplit] = useState("All"),
+        [view, setView] = useState<"grid" | "list">(() => {
+            try {
+                return localStorage.getItem("libraryView") === "list"
+                    ? "list"
+                    : "grid";
+            } catch {
+                return "grid";
+            }
+        }),
         [query, setQuery] = useState(""),
         [muscle, setMuscle] = useState("All"),
         [equipment, setEquipment] = useState("All"),
@@ -146,6 +157,11 @@ function App() {
         const t = setInterval(() => setRest((v) => Math.max(0, v - 1)), 1000);
         return () => clearInterval(t);
     }, [rest > 0]);
+    useEffect(() => {
+        try {
+            localStorage.setItem("libraryView", view);
+        } catch {}
+    }, [view]);
     const completed = sessions.filter((s) => s.finishedAt);
     const weekStart = new Date();
     weekStart.setDate(weekStart.getDate() - ((weekStart.getDay() + 6) % 7));
@@ -167,11 +183,12 @@ function App() {
             ),
         0,
     );
+    const inSplit = (e: any) => split === "All" || e.split === split;
     const filtered = useMemo(
         () =>
             exercises.filter(
                 (e) =>
-                    e.split === split &&
+                    inSplit(e) &&
                     `${e.name} ${e.primaryMuscles.join(" ")} ${e.equipment.join(" ")}`
                         .toLowerCase()
                         .includes(query.toLowerCase()) &&
@@ -659,7 +676,7 @@ function App() {
                             </div>
                         </div>
                         <div className="split-tabs">
-                            {["Push", "Pull", "Legs"].map((s) => (
+                            {["All", "Push", "Pull", "Legs"].map((s) => (
                                 <button
                                     key={s}
                                     className={split === s ? "selected" : ""}
@@ -673,7 +690,9 @@ function App() {
                                     <span>
                                         {
                                             exercises.filter(
-                                                (e) => e.split === s,
+                                                (e) =>
+                                                    s === "All" ||
+                                                    e.split === s,
                                             ).length
                                         }
                                     </span>
@@ -688,7 +707,6 @@ function App() {
                                     onChange={(e) => setQuery(e.target.value)}
                                     placeholder="Search exercise or muscle..."
                                 />
-                                <kbd>⌕</kbd>
                             </div>
                             <select
                                 value={muscle}
@@ -698,7 +716,7 @@ function App() {
                                 {Array.from(
                                     new Set(
                                         exercises
-                                            .filter((e) => e.split === split)
+                                            .filter(inSplit)
                                             .flatMap((e) => e.primaryMuscles),
                                     ),
                                 )
@@ -715,7 +733,7 @@ function App() {
                                 {Array.from(
                                     new Set(
                                         exercises
-                                            .filter((e) => e.split === split)
+                                            .filter(inSplit)
                                             .flatMap((e) => e.equipment),
                                     ),
                                 )
@@ -730,9 +748,31 @@ function App() {
                             <span>
                                 <Filter size={13} /> FILTERED BY{" "}
                                 {split.toUpperCase()}
+                                <span
+                                    className="view-toggle"
+                                    role="group"
+                                    aria-label="Mode tampilan"
+                                >
+                                    <button
+                                        aria-pressed={view === "grid"}
+                                        aria-label="Grid"
+                                        title="Grid"
+                                        onClick={() => setView("grid")}
+                                    >
+                                        <LayoutGrid size={14} />
+                                    </button>
+                                    <button
+                                        aria-pressed={view === "list"}
+                                        aria-label="List"
+                                        title="List"
+                                        onClick={() => setView("list")}
+                                    >
+                                        <List size={14} />
+                                    </button>
+                                </span>
                             </span>
                         </div>
-                        <div className="exercise-grid">
+                        <div className={`exercise-grid ${view}`}>
                             {filtered.map((e, i) => (
                                 <button
                                     className="exercise-card"
@@ -744,10 +784,10 @@ function App() {
                                     }}
                                 >
                                     <div
-                                        className={`exercise-art ${split.toLowerCase()}${e.imageId ? " has-img" : ""}`}
+                                        className={`exercise-art ${e.split.toLowerCase()}${e.imageId ? " has-img" : ""}`}
                                     >
                                         <span>
-                                            {split.toUpperCase()} /{" "}
+                                            {e.split.toUpperCase()} /{" "}
                                             {String(i + 1).padStart(2, "0")}
                                         </span>
                                         {e.imageId ? (
