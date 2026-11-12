@@ -7,6 +7,7 @@ import {
     BarChart3,
     CalendarDays,
     Check,
+    ChevronLeft,
     ChevronRight,
     Clock,
     Dumbbell,
@@ -103,7 +104,8 @@ function App() {
         [elapsed, setElapsed] = useState(0),
         [rest, setRest] = useState(0),
         [customTemplates, setCustomTemplates] = useState<any[]>([]),
-        [peekExercise, setPeekExercise] = useState<any>(null);
+        [peekExercise, setPeekExercise] = useState<any>(null),
+        [sidebarOpen, setSidebarOpen] = useState(true);
     const refresh = async () => {
         const rows = await allSessions();
         setSessions(rows.sort((a, b) => b.date.localeCompare(a.date)));
@@ -423,44 +425,69 @@ function App() {
                         : "Exercise Detail";
     return (
         <div className="app-shell">
-            <aside className="sidebar">
+            <aside className={`sidebar${sidebarOpen ? "" : " sidebar-hidden"}`}>
                 <div className="brand">
-                    <div className="brand-mark">
-                        <Dumbbell size={21} />
-                    </div>
-                    <div>
-                        <b>
-                            PPL <span>LIBRARY</span>
-                        </b>
-                        <small>TRAIN WITH INTENT</small>
-                    </div>
+                    {sidebarOpen ? (
+                        <div className="brand-mark">
+                            <Dumbbell size={21} />
+                        </div>
+                    ) : (
+                        <button
+                            className="brand-mark brand-mark-collapsed"
+                            onClick={() => setSidebarOpen(true)}
+                            aria-label="Tampilkan sidebar"
+                            title="Tampilkan sidebar"
+                        >
+                            <Dumbbell size={21} />
+                            <ChevronRight size={21} />
+                        </button>
+                    )}
+                    {sidebarOpen && (
+                        <>
+                            <div>
+                                <b>PPL <span>LIBRARY</span></b>
+                                <small>TRAIN WITH INTENT</small>
+                            </div>
+                            <button
+                                className="sidebar-toggle-btn"
+                                onClick={() => setSidebarOpen(false)}
+                                title="Sembunyikan sidebar"
+                            >
+                                <ChevronLeft size={16} />
+                            </button>
+                        </>
+                    )}
                 </div>
-                <div className="side-label">WORKSPACE</div>
+                {sidebarOpen && <div className="side-label">WORKSPACE</div>}
                 {nav.map((n) => (
                     <button
                         key={n.id}
                         className={`nav-item ${page === n.id ? "active" : ""}`}
                         onClick={() => setPage(n.id as Page)}
+                        title={sidebarOpen ? undefined : n.label}
                     >
                         <n.icon size={18} />
-                        {n.label}
+                        {sidebarOpen && <span>{n.label}</span>}
                     </button>
                 ))}
                 <div className="side-bottom">
                     <button
                         className={`nav-item ${page === "settings" ? "active" : ""}`}
                         onClick={() => setPage("settings")}
+                        title={sidebarOpen ? undefined : "Settings"}
                     >
                         <Settings size={18} />
-                        Settings
+                        {sidebarOpen && <span>Settings</span>}
                     </button>
-                    <div className="local-status">
-                        <span className="live-dot" /> Data tersimpan di
-                        perangkat
-                    </div>
+                    {sidebarOpen && (
+                        <div className="local-status">
+                            <span className="live-dot" /> Data tersimpan di
+                            perangkat
+                        </div>
+                    )}
                 </div>
             </aside>
-            <main className="main">
+            <main className={`main${sidebarOpen ? "" : " sidebar-collapsed"}`}>
                 <header className="topbar">
                     <div className="mobile-brand">
                         <Dumbbell size={19} /> PPL LIBRARY
