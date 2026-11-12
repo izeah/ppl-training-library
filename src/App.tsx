@@ -1070,20 +1070,29 @@ function App() {
                                     </div>
                                     <h3>{t.name}</h3>
                                     <div className="template-items">
-                                        {t.items.map((it, i) => (
-                                            <div key={i}>
-                                                <span>
-                                                    {String(i + 1).padStart(
-                                                        2,
-                                                        "0",
-                                                    )}
-                                                </span>
-                                                {it.name}
-                                                <small>
-                                                    {it.sets} × {it.reps}
-                                                </small>
-                                            </div>
-                                        ))}
+                                        {t.items.map(
+                                            (
+                                                it: {
+                                                    name: string;
+                                                    sets: number;
+                                                    reps: string;
+                                                },
+                                                i: number,
+                                            ) => (
+                                                <div key={i}>
+                                                    <span>
+                                                        {String(i + 1).padStart(
+                                                            2,
+                                                            "0",
+                                                        )}
+                                                    </span>
+                                                    {it.name}
+                                                    <small>
+                                                        {it.sets} × {it.reps}
+                                                    </small>
+                                                </div>
+                                            ),
+                                        )}
                                     </div>
                                     <div className="template-foot">
                                         <span>
